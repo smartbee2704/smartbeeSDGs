@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flux-style One Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A FluxBoi-inspired single-page site template (animated gradient, glass cards).">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home">FluxClone</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner glass">
+        <h1 class="hero-title">Create. Experiment. Ship.</h1>
+        <p class="hero-sub">A clean single-page template inspired by the referenced site — animated gradient, glass cards and minimal interactions.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">See projects</a>
+          <a class="btn outline" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <!-- decorative blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="glass about-grid">
+        <div>
+          <h2>About this template</h2>
+          <p>This is a small, responsive site template that uses a moving gradient background and glassmorphism panels for a modern look. It's lightweight and pure HTML/CSS/JS — easy to customize.</p>
+          <ul>
+            <li>Animated gradient background</li>
+            <li>Glass cards with subtle shadows</li>
+            <li>Smooth scrolling and mobile nav</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Quick facts</h3>
+          <p><strong>Files:</strong> index.html, styles.css, script.js</p>
+          <p><strong>Responsive:</strong> Yes</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title">Projects</h2>
+      <div class="cards-grid">
+        <article class="card glass">
+          <h3>Project One</h3>
+          <p>Short description of the project. Clean UI and small animations.</p>
+          <div class="card-actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">View</a>
+            <a class="btn small outline" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card glass">
+          <h3>Project Two</h3>
+          <p>Another example project. Replace with your screenshots or links.</p>
+          <div class="card-actions">
+            <a class="btn small" href="#">View</a>
+            <a class="btn small outline" href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="card glass">
+          <h3>Project Three</h3>
+          <p>Demo app: interactive, responsive, minimal dependencies.</p>
+          <div class="card-actions">
+            <a class="btn small" href="#">View</a>
+            <a class="btn small outline" href="#">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="glass contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>Want this tailored? Or need help deploying? Reach out.</p>
+          <p><strong>Email:</strong> hello@example.com</p>
+        </div>
+        <form id="contactForm" class="contact-form" action="#" onsubmit="return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="you@domain.com" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea placeholder="Hi — I'd like to..." rows="4" required></textarea>
+          </label>
+          <div style="text-align:right;">
+            <button class="btn primary" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> FluxClone — built with HTML/CSS/JS</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
