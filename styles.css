@@ -117,7 +117,7 @@ body::after {
   line-height:1.02;
   margin-bottom: .6rem;
   font-weight:800;
-  background: linear-gradient(90deg, #fff, #d9e6ff 60%);
+  background: linear-gradient(90deg, #66527A, #533d69 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
