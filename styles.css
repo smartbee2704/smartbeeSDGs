@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #F7F4EC;
-  background: linear-gradient(135deg, rgba(10,10,20,0.6), rgba(20,10,50,0.5));
+  background: linear-gradient(135deg, rgba(247, 244, 236, 0.6), rgba(247, 225, 166, 0.5));
   min-height: 100%;
   overflow-x: hidden;
 }
