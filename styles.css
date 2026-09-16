@@ -130,7 +130,7 @@ body::after {
   padding: .6rem .95rem;
   border-radius: 10px;
   font-weight:600;
-  color: #0b1020;
+  color: #8A6A2E;;
   background: rgba(255,255,255,0.95);
   transition: transform .16s, box-shadow .16s;
 }
