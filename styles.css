@@ -137,10 +137,10 @@ body::after {
 .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
 .btn.outline {
   background: transparent;
-  color: #e7f2ff;
+  color: #74458a;
   border: 1px solid rgba(255,255,255,0.08);
 }
-.btn.primary { background: linear-gradient(90deg,#60a5fa,#7c3aed); color: white; border: none; }
+.btn.primary { background: linear-gradient(90deg,#E5B83B,#F3D98A); color: #F3D98A; border: none; }
 .btn.small { padding: .4rem .6rem; font-size: .92rem; border-radius: 8px; }
 
 /* blobs */
