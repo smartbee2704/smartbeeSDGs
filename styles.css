@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #F7F4EC;
-  background: linear-gradient(135deg, rgba(247, 244, 236, 0.6), rgba(247, 225, 166, 0.5));
+  background: linear-gradient(135deg, rgba(247,244,236,0.6), rgba(247,225,166,0.5));
   min-height: 100%;
   overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(6,6,10,0.35), rgba(6,6,10,0.5));
+  background: linear-gradient(180deg, rgba(238,234,241,0.35), rgba(229,205,247,0.5));
 }
 
 /* layout helpers */
