@@ -121,7 +121,7 @@ body::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-sub { color: rgba(230,240,255,0.85); margin-bottom:1.2rem; font-weight:500; }
+.hero-sub { color: rgba(102,82,122,0.85); margin-bottom:1.2rem; font-weight:500; }
 
 /* buttons */
 .btn {
