@@ -20,7 +20,7 @@ body::before {
   inset: 0;
   z-index: -2;
   background: linear-gradient(120deg,
-    #ff6b6b, #f94dff 20%, #5eead4 45%, #60a5fa 70%, #ffb86b);
+    #ffc96b, #ffa04d 20%, #fcdc97 45%, #fae8a7 70%, #ffb86b);
   filter: blur(20px) saturate(1.2);
   opacity: 0.85;
   transform: scale(1.2);
