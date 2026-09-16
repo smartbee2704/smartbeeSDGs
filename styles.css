@@ -140,7 +140,7 @@ body::after {
   color: #74458a;
   border: 1px solid rgba(255,255,255,0.08);
 }
-.btn.primary { background: linear-gradient(90deg,#E5B83B,#F3D98A); color: #F3D98A; border: none; }
+.btn.primary { background: linear-gradient(90deg,#fcbc3a,#fac352); color: #302B34; border: none; }
 .btn.small { padding: .4rem .6rem; font-size: .92rem; border-radius: 8px; }
 
 /* blobs */
