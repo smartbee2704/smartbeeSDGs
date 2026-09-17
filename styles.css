@@ -8,14 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #66527a;
-  min-height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   background-image: url('Healthy Bees-3.png');
   background-size: cover;          /* ขยายรูปให้เต็มพื้นที่กล่องพอดี */
   background-position: center;     /* จัดตำแหน่งรูปไว้ตรงกลาง */
   background-repeat: no-repeat;    /* ป้องกันไม่ให้รูปซ้ำกัน */
   background-attachment: fixed;
-  height: 100vh;
   margin: 0;
 }
 
@@ -24,7 +23,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: -1;
   background: linear-gradient(120deg,
     #ffc96b, #f5d87a 20%, #fcecc7 45%, #fae8a7 70%, #ffd36b);
   filter: blur(20px) saturate(1.2);
