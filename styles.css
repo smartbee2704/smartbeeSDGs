@@ -123,11 +123,11 @@ body::after {
 }
 .hero-sub { color: rgba(102,82,122,0.85); margin-bottom:1.2rem; font-weight:500; }
 .hero-logo {
-  max-width: 160px; /* จำกัดขนาดสูงสุดบนคอมพิวเตอร์ และย่อส่วนเองบนมือถือ */
-  width: auto;
+  max-width: 160px; 
+  width: 400px
   height: auto;
   display: block;
-  margin: 0 auto 0rem auto; /* จัดกึ่งกลางและเว้นระยะห่างด้านล่าง */
+  margin: 0 auto 0rem auto; 
 }
 
 /* buttons */
