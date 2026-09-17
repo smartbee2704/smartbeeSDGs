@@ -31,7 +31,7 @@ body::before {
   opacity: 0.85;
   transform: scale(1.2);
   animation: gradientShift 12s linear infinite;
-  background-size: 600% 600%;
+  background-size: 100% 100%;
 }
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
