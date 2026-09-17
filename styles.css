@@ -116,6 +116,15 @@ body::after {
   background-size: cover;          /* ขยายรูปให้เต็มพื้นที่กล่องพอดี */
   background-position: center;     /* จัดตำแหน่งรูปไว้ตรงกลาง */
   background-repeat: no-repeat;    /* ป้องกันไม่ให้รูปซ้ำกัน */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* จัดเนื้อหาให้อยู่กลางในแนวตั้ง */
+  align-items: center;     /* จัดเนื้อหาให้อยู่กลางในแนวนอน */
+  text-align: center;      /* จัดข้อความให้ชิดกลาง */
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 /* hero */
