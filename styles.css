@@ -43,7 +43,7 @@ body::after {
 }
 
 /* layout helpers */
-.container { max-width: 90%; margin: 0 auto; padding: 2rem; }
+.container { max-width: 80%; margin: 0 auto; padding: 2rem; }
 .section { padding: 4rem 0; }
 
 /* header / nav */
@@ -129,7 +129,7 @@ body::after {
 
 /* hero */
 .hero { position: relative; padding: 6rem 0 5rem; display:flex; align-items:center; justify-content:center; }
-.hero-inner { text-align:center; max-width: 100%; }
+.hero-inner { text-align:center; max-width: 90%; }
 .hero-title {
   font-size: clamp(2rem, 6vw, 3.2rem);
   line-height:1.02;
