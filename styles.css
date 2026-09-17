@@ -108,6 +108,15 @@ body::after {
   box-shadow: 0 6px 30px rgba(2,6,23,0.6);
   backdrop-filter: blur(8px) saturate(120%);
 }
+.glass2 {
+  /* ใส่รูปภาพพื้นหลังของคุณ */
+  background-image: url('Healthy Bees.png');
+  
+  /* ตั้งค่าการแสดงผลของรูปภาพ */
+  background-size: cover;          /* ขยายรูปให้เต็มพื้นที่กล่องพอดี */
+  background-position: center;     /* จัดตำแหน่งรูปไว้ตรงกลาง */
+  background-repeat: no-repeat;    /* ป้องกันไม่ให้รูปซ้ำกัน */
+}
 
 /* hero */
 .hero { position: relative; padding: 6rem 0 5rem; display:flex; align-items:center; justify-content:center; }
