@@ -8,6 +8,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #66527a;
+  min-height: 100%;
+  overflow-x: hidden;
   background-image: url('Healthy Bees-3.png');
   background-size: cover;          /* ขยายรูปให้เต็มพื้นที่กล่องพอดี */
   background-position: center;     /* จัดตำแหน่งรูปไว้ตรงกลาง */
