@@ -18,7 +18,14 @@ body {
   margin: 0;
 }
 
-
+/* subtle dim layer */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(238,234,241,0.35), rgba(229,205,247,0.5));
+}
 
 /* layout helpers */
 .container { max-width: 85%; margin: 0 auto; padding: 2rem; }
@@ -144,7 +151,7 @@ body {
 
 /* hero */
 .hero { position: relative; padding: 6rem 0 5rem; display:flex; align-items:center; justify-content:center; }
-.hero-inner { text-align:center; max-width: 90%; }
+.hero-inner { text-align:center; max-width: 100%; }
 .hero-title {
   font-size: clamp(2rem, 6vw, 3.2rem);
   line-height:1.02;
