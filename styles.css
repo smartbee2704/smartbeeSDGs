@@ -55,14 +55,14 @@ body::after {
             justify-content: space-between; /* กระจายหัวข้อให้ห่างเท่ากันพอดีขอบซ้าย-ขวา */
             align-items: center;      /* จัดให้หัวข้ออยู่กึ่งกลางในแนวตั้ง */
             width: 100%;             /* ให้ความกว้างเต็มหน้าจอ */
-            background-color: #f0f0f0;
+            background-color: #f1ebfc;
             padding: 10px 0;
 }
 
 .item {
             flex: 1;                  /* แบ่งพื้นที่ให้แต่ละหัวข้อเท่าๆ กัน */
             text-align: center;       /* จัดตัวอักษรให้อยู่กึ่งกลางของแต่ละช่อง */
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
 }
 
