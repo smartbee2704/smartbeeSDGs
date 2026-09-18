@@ -128,7 +128,7 @@ body::after {
   border-radius: 14px;
   padding: 2rem;
   box-shadow: 0 6px 12px rgba(130, 130, 129,0.6);
-  backdrop-filter: blur(8px) saturate(200%);
+  backdrop-filter: blur(8px) saturate(100%);
 }
 .glass2 {
   /* ใส่รูปภาพพื้นหลังของคุณ */
