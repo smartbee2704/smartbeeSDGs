@@ -196,7 +196,7 @@ body::after {
 .card-actions { display:flex; gap:.5rem; margin-top: .75rem; }
 
 /* contact */
-.contact-grid { display:grid; grid-template-columns: 1fr 420px; gap: 1rem; align-items:start; }
+.contact-grid { display:grid; grid-template-columns: 1fr 420px; gap: 1rem; align-items:center; }
 .contact-form label { display:block; margin-bottom: .6rem; font-weight:600; color: #dbeefe; }
 .contact-form input, .contact-form textarea {
   width:100%; padding: .6rem; border-radius: 10px; border:1px solid rgba(255,255,255,0.05);
