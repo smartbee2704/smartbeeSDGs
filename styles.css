@@ -18,34 +18,7 @@ body {
   margin: 0;
 }
 
-/* Animated gradient background using pseudo-element technique */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(120deg,
-    #ffc96b, #f5d87a 20%, #fcecc7 45%, #fae8a7 70%, #ffd36b);
-  filter: blur(20px) saturate(1.2);
-  opacity: 0.85;
-  transform: scale(1.2);
-  animation: gradientShift 12s linear infinite;
-  background-size: 100% 100%;
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
-/* subtle dim layer */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(238,234,241,0.35), rgba(229,205,247,0.5));
-}
 
 /* layout helpers */
 .container { max-width: 85%; margin: 0 auto; padding: 2rem; }
