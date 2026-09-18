@@ -57,14 +57,36 @@ body::after {
             width: 100%;             /* ให้ความกว้างเต็มหน้าจอ */
             background-color: #f1ebfc;
             padding: 10px 0;
+            border-bottom: 1px solid #ddd;
 }
 
 .item {
             flex: 1;                  /* แบ่งพื้นที่ให้แต่ละหัวข้อเท่าๆ กัน */
             text-align: center;       /* จัดตัวอักษรให้อยู่กึ่งกลางของแต่ละช่อง */
             font-size: 16px;
-            font-weight: bold;
+            font-weight: small;
+            color: #352d42;
+            cursor: pointer;
+            transition: 0.3s;
 }
+.item i, .item img {
+            display: block;           /* บังคับให้ไอคอนอยู่คนละบรรทัดกับข้อความ (อยู่ด้านบน) */
+            font-size: 24px;          /* ขนาดของไอคอนแบบ Font Awesome */
+            margin-bottom: 8px;       /* ระยะห่างระหว่างไอคอนกับข้อความ */
+            color: #007bff;           /* สีของไอคอน */
+        }
+
+        /* กรณีใช้รูปภาพของตัวเอง ปรับความสูงไม่ให้เกินข้อความ */
+        .item img {
+            height: 24px;
+            width: auto;
+            margin: 0 auto 8px auto;  /* จัดรูปภาพให้อยู่กึ่งกลาง */
+        }
+
+        /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ */
+        .item:hover {
+            color: #007bff;
+        }
 
 /* header / nav */
 .site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); }
