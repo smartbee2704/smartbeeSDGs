@@ -49,7 +49,7 @@ body::after {
 
 /* layout helpers */
 .container { max-width: 85%; margin: 0 auto; padding: 2rem; }
-.section { padding: 4rem 0; }
+.section { padding: 2rem 0; }
 
 /* header / nav */
 .site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); }
