@@ -50,6 +50,21 @@ body::after {
 /* layout helpers */
 .container { max-width: 85%; margin: 0 auto; padding: 2rem; }
 .section { padding: 2rem 0; }
+.container2 {
+            display: flex;            /* เปิดใช้งาน Flexbox เพื่อจัดเรียงแนวนอน */
+            justify-content: space-between; /* กระจายหัวข้อให้ห่างเท่ากันพอดีขอบซ้าย-ขวา */
+            align-items: center;      /* จัดให้หัวข้ออยู่กึ่งกลางในแนวตั้ง */
+            width: 100%;             /* ให้ความกว้างเต็มหน้าจอ */
+            background-color: #f0f0f0;
+            padding: 10px 0;
+}
+
+.item {
+            flex: 1;                  /* แบ่งพื้นที่ให้แต่ละหัวข้อเท่าๆ กัน */
+            text-align: center;       /* จัดตัวอักษรให้อยู่กึ่งกลางของแต่ละช่อง */
+            font-size: 18px;
+            font-weight: bold;
+}
 
 /* header / nav */
 .site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); }
