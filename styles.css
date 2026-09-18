@@ -171,7 +171,7 @@ body::after {
   border: 1px solid rgba(255,255,255,0.08);
 }
 .btn.primary { background: linear-gradient(90deg,#fcbc3a,#fac352); color: #302B34; border: none; }
-.btn.small { padding: .4rem .6rem; font-size: .92rem; color: yellow; border-radius: 8px; }
+.btn.small { padding: .4rem .6rem; font-size: .92rem; border-radius: 8px; background: linear-gradient(90deg,#fcbc3a,#fac352); color: #302B34;}
 
 /* blobs */
 .blob {
