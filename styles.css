@@ -204,9 +204,14 @@ body::after {
 /* about */
 .about-grid { display:grid; grid-template-columns: 1fr 320px; gap: 1.25rem; }
 .side-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 1rem; border-radius: 12px; }
+.about-content p,
+.about-content ul {
+    margin-left: 0;
+}
+
 .styled-list {
-    margin-top: 0.5rem;
-    padding-left: 1rem; } /* reduce from browser default */
+    padding-left: 20px;
+}
 
 
 /* projects cards */
