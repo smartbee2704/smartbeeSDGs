@@ -183,16 +183,6 @@ body {
 .btn.primary { background: linear-gradient(90deg,#fcbc3a,#fac352); color: #302B34; border: none; }
 .btn.small { padding: .4rem .6rem; font-size: .92rem; border-radius: 8px; background: linear-gradient(90deg,#fcbc3a,#fac352); color: #302B34;}
 
-/* blobs */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px) saturate(160%);
-  opacity: .7;
-  z-index:-1;
-}
-.blob-1 { width: 380px; height: 380px; background: radial-gradient(circle at 30% 30%, rgba(255,106,106,0.75), rgba(255,106,106,0.15)); left: -80px; top: -80px; transform: rotate(10deg); }
-.blob-2 { width: 300px; height: 300px; background: radial-gradient(circle at 70% 60%, rgba(124,58,237,0.85), rgba(124,58,237,0.12)); right: -60px; bottom: -60px; }
 
 /* about */
 .about-grid { display:grid; grid-template-columns: 1fr 320px; gap: 1.25rem; }
