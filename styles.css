@@ -24,7 +24,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  /*background: linear-gradient(180deg, rgba(238,234,241,0.35), rgba(229,205,247,0.5));
+  background: linear-gradient(180deg, rgba(238,234,241,0.35), rgba(229,205,247,0.5));
 }
 
 /* layout helpers */
