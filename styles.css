@@ -10,7 +10,7 @@ body {
   color: #66527a;
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: url('BG4.png');
+  background-image: url('BG5.png');
   background-size: cover;          /* ขยายรูปให้เต็มพื้นที่กล่องพอดี */
   background-position: center;     /* จัดตำแหน่งรูปไว้ตรงกลาง */
   background-repeat: no-repeat;    /* ป้องกันไม่ให้รูปซ้ำกัน */
