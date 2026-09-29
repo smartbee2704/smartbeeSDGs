@@ -25,11 +25,12 @@ body {
 .section { padding: 2rem 0; }
 .container2 {
             display: flex;            /* เปิดใช้งาน Flexbox เพื่อจัดเรียงแนวนอน */
+            flex-wrap: wrap;          /* สำคัญ: อนุญาตให้ข้อมูลขึ้นบรรทัดใหม่เมื่อพื้นที่หมด */
             justify-content: space-between; /* กระจายหัวข้อให้ห่างเท่ากันพอดีขอบซ้าย-ขวา */
             align-items: center;      /* จัดให้หัวข้ออยู่กึ่งกลางในแนวตั้ง */
             width: 100%;             /* ให้ความกว้างเต็มหน้าจอ */
             background-color: #f1ebfc;
-            padding: 10px 0;
+            padding: 10px 10px;
             border-bottom: 1px solid #ddd;
 }
 
