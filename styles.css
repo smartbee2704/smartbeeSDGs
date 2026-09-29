@@ -53,7 +53,7 @@ body {
 
         /* กรณีใช้รูปภาพของตัวเอง ปรับความสูงไม่ให้เกินข้อความ */
         .item img {
-            height: 24px;
+            height: 100px;
             width: auto;
             margin: 0 auto 8px auto;  /* จัดรูปภาพให้อยู่กึ่งกลาง */
         }
