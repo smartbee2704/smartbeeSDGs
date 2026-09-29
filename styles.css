@@ -928,9 +928,9 @@ main {
 
 .item img {
 
-    width: 58px;
+    width: 100px;
 
-    height: 58px;
+    height: 100px;
 
     object-fit: contain;
 
