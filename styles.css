@@ -31,7 +31,7 @@ body {
             gap: 10px;                  /* ระยะห่างระหว่างแถวและคอลัมน์ (รองรับ CSS สมัยใหม่) */
             width: 100%;             /* ให้ความกว้างเต็มหน้าจอ */
             background-color: #f1ebfc;
-            padding: 10px 10px;
+            padding: 10px 15px;
             border-bottom: 1px solid #ddd;
 }
 
