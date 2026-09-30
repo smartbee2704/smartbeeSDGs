@@ -1125,21 +1125,23 @@ main {
 
 .news-slider {
     display: flex !important;
-
     width: 100% !important;
-
     overflow-x: auto !important;
     overflow-y: hidden;
 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
+    /* 1. Push the scrollbar track away from the bottom of the cards */
+    padding-bottom: 10px !important;
+
+    /* 2. Optional: Push content below the slider away from the scrollbar */
+    margin-bottom: 10px;
+
     /* Show scrollbar */
     scrollbar-width: auto;
-
     -webkit-overflow-scrolling: touch;
 }
-
 
 /* Chrome, Safari, Edge */
 .news-slider::-webkit-scrollbar {
