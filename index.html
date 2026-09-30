@@ -675,9 +675,36 @@
                     </div>
                 </div>
             </article>
-
+            
 
             <!-- NEWS 2 -->
+            <article class="card glass">
+                <img src="vietnam.jpg"
+                     class="news-img"
+                     alt="Seminar and Workshop in Vietnam">
+
+                <div class="card-content">
+                    <h3>Seminar and Workshop</h3>
+
+                    <p class="text-justify" align="justify">
+                        Seminar and workshop under the theme
+                        “Technical Training on Beekeeping Technologies, Artificial Insemination, and                          Value-Added Honey Product Processing” 
+                        at Sa Pa, Vietnam.
+                    </p>
+
+                    <div class="card-actions">
+                        <a class="btn small"
+                           href="https://www.facebook.com/share/p/1D42SA8vST/"
+                           target="_blank"
+                           rel="noopener">
+                            View
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- NEWS 3 -->
             <article class="card glass">
                 <img src="Laos1.jpeg"
                      class="news-img"
@@ -703,8 +730,17 @@
                 </div>
             </article>
 
+        </div>
 
-            <!-- NEWS 3 -->
+    </div>
+
+
+    <!-- PAGE 2 -->
+    <div class="news-slide">
+
+        <div class="cards-grid">
+
+            <!-- NEWS 4 -->
             <article class="card glass">
                 <img src="myanmar1.jpeg"
                      class="news-img"
@@ -731,62 +767,55 @@
                 </div>
             </article>
 
-        </div>
-
-    </div>
-
-
-    <!-- PAGE 2 -->
-    <div class="news-slide">
-
-        <div class="cards-grid">
-
-            <!-- NEWS 4 -->
-            <article class="card glass">
-                <img src="news4.jpg" class="news-img" alt="News 4">
-
-                <div class="card-content">
-                    <h3>News 4</h3>
-
-                    <p>Description for news 4.</p>
-
-                    <div class="card-actions">
-                        <a class="btn small" href="#">View</a>
-                    </div>
-                </div>
-            </article>
-
-
             <!-- NEWS 5 -->
             <article class="card glass">
-                <img src="news5.jpg" class="news-img" alt="News 5">
+                <img src="AI.png"
+                     class="news-img"
+                     alt="Bee Vision AI">
 
                 <div class="card-content">
-                    <h3>News 5</h3>
+                    <h3>Bee Vision AI </h3>
 
-                    <p>Description for news 5.</p>
+                    <p class="text-justify" align="justify">
+                        A robotic system that helps researchers accurately analyze                           the structure and composition of honeybee colonies and hives. In the future,                          it will be able to detect signs of disease and provide early warnings to                              beekeepers through miniature sensors installed inside the hive.
+                    </p>
 
                     <div class="card-actions">
-                        <a class="btn small" href="#">View</a>
+                        <a class="btn small"
+                           href="https://www.facebook.com/share/p/19uB6RjGx3/"
+                           target="_blank"
+                           rel="noopener">
+                            View
+                        </a>
                     </div>
                 </div>
             </article>
-
-
-            <!-- NEWS 6 -->
+          
+          
+          <!-- NEWS 6 -->
             <article class="card glass">
-                <img src="news6.jpg" class="news-img" alt="News 6">
+                <img src="AI.png"
+                     class="news-img"
+                     alt="Bee Vision AI">
 
                 <div class="card-content">
-                    <h3>News 6</h3>
+                    <h3>Bee Vision AI </h3>
 
-                    <p>Description for news 6.</p>
+                    <p class="text-justify" align="justify">
+                        A robotic system that helps researchers accurately analyze                           the structure and composition of honeybee colonies and hives. In the future,                          it will be able to detect signs of disease and provide early warnings to                              beekeepers through miniature sensors installed inside the hive.
+                    </p>
 
                     <div class="card-actions">
-                        <a class="btn small" href="#">View</a>
+                        <a class="btn small"
+                           href="https://www.facebook.com/share/p/19uB6RjGx3/"
+                           target="_blank"
+                           rel="noopener">
+                            View
+                        </a>
                     </div>
                 </div>
             </article>
+          
 
         </div>
 
@@ -1217,18 +1246,32 @@
 
 
             <footer class="site-footer">
+    <div class="footer-container">
+        
+        <!-- left -->
+        <div class="footer-left">
+            <p class="copyright-left">
+                &copy; <span id="year"></span> SmartbeeSDGs / Chiang Mai          University
+            </p>
+        </div>
 
-                <small>
-                    © <span id="year"></span>
-                    SmartbeeSDGs / Chiang Mai University
-                </small>
+        <!-- right -->
+        <div class="footer-right">
+            <div class="university-location">
+              Chiang Mai University, 239 Huay Kaew Rd, Suthep, Mueang Chiang Mai District, Chiang Mai 50200
+            </div>
+            
+            <div class="footer-logos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvjNdTWfHNei7ynGp5syOVzTAIQRvIlNkOFRkV9z4B_0g0Uhr33jjc4Gg&s=10" alt="SmartbeeSDGs Logo" class="footer-logo">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/CMU_sub-logo.svg/3840px-CMU_sub-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Chiang Mai University Logo" class="footer-logo">
+            </div>
+        </div>
 
-            </footer>
-
+    </div>
+</footer>
         </div>
 
     </section>
-
 
 </main>
 
@@ -1336,20 +1379,13 @@ document.addEventListener("DOMContentLoaded", function () {
        FOOTER YEAR
     ------------------------------------------------------- */
 
-    const year =
-        document.getElementById("year");
-
+    const year = document.getElementById("year");
     if (year) {
-
-        year.textContent =
-            new Date().getFullYear();
-
+        year.textContent = new Date().getFullYear();
     }
 
 });
-
 </script>
-
 
 </body>
 </html>
