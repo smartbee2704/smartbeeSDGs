@@ -293,24 +293,7 @@ main {
    SECTION OVERLAY
 ========================================================= */
 
-.section-overlay {
 
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 0;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(250, 248, 243, 0.15),
-            rgba(250, 248, 243, 0.72)
-        );
-
-    pointer-events: none;
-
-}
 
 
 /* =========================================================
