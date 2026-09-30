@@ -1766,7 +1766,7 @@ main {
 }
 
 .copyright-left {
-    color: #49385d;
+    color: #ffffff;
     font-size: 0.82rem;
     margin: 0;
     font-weight: 500;
@@ -1785,7 +1785,7 @@ main {
 
 /* ข้อความที่ตั้งมหาวิทยาลัย */
 .university-location {
-    color: #49385d;
+    color: #ffffff;
     font-size: 0.82rem;
     line-height: 1.4;
     max-width: 380px;
