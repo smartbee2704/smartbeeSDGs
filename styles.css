@@ -173,7 +173,7 @@ main {
         scale(0.94)
         translateY(15px);
 
-    filter: saturate(0.52);
+    filter: saturate(0.22);
 
     transition:
 
