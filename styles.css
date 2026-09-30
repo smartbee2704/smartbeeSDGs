@@ -281,7 +281,7 @@ main {
         linear-gradient(
             135deg,
             rgba(250, 248, 243, 0.16),
-            rgba(250, 248, 243, 0.16)
+            rgba(250, 248, 243, 0.26)
         );
 
     pointer-events: none;
