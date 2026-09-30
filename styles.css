@@ -1201,6 +1201,8 @@ main {
     gap: 20px;
 
     width: 100%;
+    
+    align-items: stretch;
 }
 
 
@@ -1233,6 +1235,8 @@ main {
     display: flex;
 
     flex-direction: column;
+    
+    height: 100%;
 
 }
 
@@ -1245,7 +1249,7 @@ main {
 
     display: block;
 
-    object-fit: cover;
+    object-fit: contain;
 
 }
 
@@ -1260,6 +1264,8 @@ main {
     display: flex;
 
     flex-direction: column;
+    
+    min-height: 250px;
 
 }
 
@@ -1730,23 +1736,83 @@ main {
    FOOTER
 ========================================================= */
 
+/* =========================================================
+   FOOTER TWO-COLUMN LAYOUT
+========================================================= */
+
 .site-footer {
-
     width: 100%;
-
-    margin-top: 1.5rem;
-
-    text-align: center;
-
+    padding: 20px 0 10px 0;
+    background: transparent;
+    position: relative;
+    z-index: 10;
 }
 
+/* จัดเลย์เอาต์แบ่งซ้าย-ขวาด้วย Flexbox */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+}
 
-.site-footer small {
+/* ฝั่งซ้าย */
+.footer-left {
+    text-align: left;
+}
 
-    color: #66527a;
+.copyright-left {
+    color: #49385d;
+    font-size: 0.82rem;
+    margin: 0;
+    font-weight: 500;
+}
 
-    font-size: 0.72rem;
+/* ฝั่งขวา */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* จัดข้อความและโลโก้ชิดขวา */
+    text-align: right;
+    gap: 8px;
+}
 
+/* ข้อความที่ตั้งมหาวิทยาลัย */
+.university-location {
+    color: #49385d;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    max-width: 320px; /* จำกัดความกว้างเพื่อไม่ให้ยาวเกินไป */
+    font-weight: 500;
+  
+}
+
+/* พื้นที่ใส่โลโก้คู่ด้านขวาล่าง */
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    height: 35px; /* ปรับขนาดความสูงโลโก้ตามต้องการ */
+    width: auto;
+    object-fit: contain;
+}
+
+/* รองรับการแสดงผลบนหน้าจอมือถือ */
+@media (max-width: 700px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 
