@@ -1,0 +1,972 @@
+/* =========================================================
+   SMARTBEE SDGs
+   PUBLICATIONS PAGE
+   Clean website layout
+   No background image
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --purple: #66527a;
+    --purple-dark: #49385d;
+    --purple-light: #eee9f4;
+
+    --gold: #d6a442;
+
+    --cream: #faf8f3;
+
+    --text: #34303a;
+    --text-light: #716b75;
+
+    --white: #ffffff;
+
+    --border: rgba(102, 82, 122, 0.14);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+/* =========================================================
+   HEADER
+   EXACT SAME STYLE AS INDEX.HTML
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(73, 56, 93, 0.10);
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND CONTAINER
+========================================================= */
+
+.brand-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #2f6e35;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    text-decoration: none;
+}
+
+
+.brand small {
+
+    margin-top: 3px;
+
+    color: #607d8b;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.70rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.nav-link {
+
+    display: inline-block;
+
+    padding: 9px 10px;
+
+    color: #49385d;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.nav-link:hover {
+
+    color: white;
+
+    background: #66527a;
+
+    transform: translateY(-1px);
+}
+
+
+/* Current page */
+
+.nav-link.active {
+
+    color: white;
+
+    background: #66527a;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.nav-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #49385d;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+
+        position: sticky;
+
+        top: 0;
+    }
+
+
+    .nav {
+
+        min-height: 75px;
+    }
+
+
+    .nav-logo {
+
+        width: 50px;
+
+        height: 50px;
+    }
+
+
+    .brand {
+
+        font-size: 1.1rem;
+    }
+
+
+    .brand small {
+
+        font-size: 0.62rem;
+    }
+
+
+    .nav-toggle {
+
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 5% 18px;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        backdrop-filter: blur(10px);
+
+        -webkit-backdrop-filter: blur(10px);
+
+        border-bottom: 1px solid rgba(73, 56, 93, 0.10);
+
+        box-shadow: 0 10px 25px rgba(73, 56, 93, 0.08);
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    .nav-link {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 11px 12px;
+
+        font-size: 0.9rem;
+
+        border-radius: 7px;
+    }
+
+}
+
+/* =========================================================
+   PUBLICATION PAGE
+========================================================= */
+
+.publication-page {
+
+    width: 100%;
+
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   PUBLICATION SECTION
+========================================================= */
+
+.publication-section {
+
+    padding: 95px 0 100px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.publication-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+
+    margin-bottom: 10px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.publication-heading h1 {
+
+    margin: 0;
+
+    color: var(--purple-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+.publication-intro {
+
+    max-width: 650px;
+
+    margin: 18px auto 0;
+
+    color: var(--text-light);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PUBLICATION LIST
+
+   IMPORTANT:
+   No fixed height.
+   No overflow-y.
+   The entire page scrolls naturally.
+========================================================= */
+
+.publication-list {
+
+    width: 100%;
+
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   PUBLICATION ITEM
+========================================================= */
+
+.publication-item {
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 35px;
+
+    padding: 34px 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        padding-left 0.3s ease,
+        padding-right 0.3s ease;
+}
+
+
+.publication-item:hover {
+
+    background: rgba(238, 233, 244, 0.55);
+
+    padding-left: 28px;
+
+    padding-right: 28px;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.pub-year {
+
+    color: var(--gold);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    padding-top: 3px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.pub-content {
+
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   PUBLICATION TITLE
+========================================================= */
+
+.pub-title {
+
+    display: inline;
+
+    color: var(--purple-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    transition: color 0.25s ease;
+}
+
+
+.pub-title:hover {
+
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   AUTHORS
+========================================================= */
+
+.pub-authors {
+
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   JOURNAL / VENUE
+========================================================= */
+
+.pub-venue {
+
+    margin-top: 5px;
+
+    color: var(--purple);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PUBLICATION FOOTER
+========================================================= */
+
+.publication-footer {
+
+    max-width: 1080px;
+
+    margin: 65px auto 0;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: var(--purple-light);
+
+    border: 1px solid rgba(102, 82, 122, 0.08);
+
+    border-radius: 22px;
+}
+
+
+.publication-footer p {
+
+    margin-bottom: 20px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn-primary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 23px;
+
+    border-radius: 999px;
+
+    background: #fac352;
+
+    color: #4d4652;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.btn-primary:hover {
+
+    background: var(--purple-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(73, 56, 93, 0.18);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding: 30px 0;
+
+    background: var(--white);
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+}
+
+
+.site-footer small {
+
+    color: var(--purple);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+
+        gap: 0;
+    }
+
+    .nav-link {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+
+        font-size: 12px;
+    }
+
+    .nav-link::after {
+
+        left: 8px;
+
+        right: 8px;
+    }
+
+    .brand {
+
+        font-size: 19px;
+    }
+
+    .logo-link img {
+
+        width: 68px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .nav {
+
+        min-height: 72px;
+    }
+
+
+    .logo-link img {
+
+        width: 58px;
+    }
+
+
+    .brand {
+
+        font-size: 18px;
+    }
+
+
+    .brand span {
+
+        font-size: 8px;
+    }
+
+
+    .nav-toggle {
+
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 12px 5% 18px;
+
+        background: rgba(250, 248, 243, 0.98);
+
+        backdrop-filter: blur(15px);
+
+        -webkit-backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: 0 15px 30px rgba(73, 56, 93, 0.08);
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+    }
+
+
+    .nav-link {
+
+        padding: 11px 5px;
+
+        font-size: 14px;
+    }
+
+
+    .nav-link::after {
+
+        left: 5px;
+
+        right: auto;
+
+        width: 35px;
+
+        bottom: 5px;
+    }
+
+
+    .publication-section {
+
+        padding: 65px 0 75px;
+    }
+
+
+    .publication-heading {
+
+        margin-bottom: 45px;
+    }
+
+
+    .publication-heading h1 {
+
+        font-size: 44px;
+    }
+
+
+    .publication-intro {
+
+        padding: 0 10px;
+
+        font-size: 14px;
+    }
+
+
+    .publication-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        padding: 28px 8px;
+    }
+
+
+    .publication-item:hover {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .pub-year {
+
+        font-size: 13px;
+    }
+
+
+    .pub-title {
+
+        font-size: 18px;
+
+        line-height: 1.5;
+    }
+
+
+    .pub-authors,
+    .pub-venue {
+
+        font-size: 12.5px;
+    }
+
+
+    .publication-footer {
+
+        margin-top: 45px;
+
+        padding: 35px 20px;
+
+        border-radius: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .container {
+
+        width: 90%;
+    }
+
+
+    .brand {
+
+        font-size: 16px;
+    }
+
+
+    .logo-link img {
+
+        width: 52px;
+    }
+
+
+    .publication-heading h1 {
+
+        font-size: 38px;
+    }
+
+
+    .pub-title {
+
+        font-size: 17px;
+    }
+
+}
