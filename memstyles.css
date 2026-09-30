@@ -1,0 +1,1370 @@
+/* =========================================================
+   SMARTBEE SDGs
+   MEMBER PAGE
+   Long Scroll Academic Website Style
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --purple: #66527a;
+    --purple-dark: #49385d;
+    --purple-light: #eee9f4;
+
+    --gold: #d6a442;
+    --gold-light: #f3e5bd;
+
+    --green: #2f6e35;
+    --green-light: #e8f1e8;
+
+    --cream: #faf8f3;
+
+    --text: #34303a;
+    --text-light: #6f6975;
+
+    --white: #ffffff;
+
+    --border: rgba(73, 56, 93, 0.12);
+
+    --shadow:
+        0 10px 35px rgba(73, 56, 93, 0.08);
+
+    --shadow-hover:
+        0 18px 45px rgba(73, 56, 93, 0.14);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background: var(--cream);
+
+    line-height: 1.65;
+
+    min-height: 100vh;
+
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(1180px, calc(100% - 40px));
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom:
+        1px solid rgba(73, 56, 93, 0.10);
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+.nav-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #2f6e35;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    text-decoration: none;
+
+}
+
+
+.brand small {
+
+    margin-top: 3px;
+
+    color: #607d8b;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.70rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-link {
+
+    display: inline-block;
+
+    padding: 9px 10px;
+
+    color: var(--purple-dark);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.nav-link:hover {
+
+    color: white;
+
+    background: var(--purple);
+
+    transform: translateY(-1px);
+
+}
+
+
+.nav-link.active {
+
+    color: white;
+
+    background: var(--purple);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.nav-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--purple-dark);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.members-page {
+
+    width: 100%;
+
+    padding-bottom: 90px;
+
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+
+    padding-top: 80px;
+
+    padding-bottom: 65px;
+
+    text-align: center;
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+}
+
+
+.page-intro h1 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--purple-dark);
+
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.intro-text {
+
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   MEMBER SECTION
+========================================================= */
+
+.member-section {
+
+    margin-bottom: 95px;
+
+}
+
+
+.member-section:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.section-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--purple-dark);
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    margin-bottom: 5px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--text-light);
+
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   PRINCIPAL INVESTIGATOR
+========================================================= */
+
+.pi-card {
+
+    display: grid;
+
+    grid-template-columns: 285px 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.pi-image {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.pi-image img {
+
+    width: 230px;
+
+    height: 295px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(73, 56, 93, 0.15);
+
+}
+
+
+.pi-content {
+
+    padding-right: 15px;
+
+}
+
+
+.member-role {
+
+    color: var(--green);
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 8px;
+
+}
+
+
+.pi-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--purple-dark);
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+}
+
+
+.interest {
+
+    color: var(--text-light);
+
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+
+}
+
+
+.member-quote {
+
+    margin-top: 22px;
+
+    padding-left: 0;
+
+    border-left: none;
+
+    color: var(--text-light);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.85rem;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+}
+
+
+.pi-card .member-quote {
+
+    text-align: left;
+
+    padding-left: 0;
+
+    border-left: none;
+
+    color: var(--text-light);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.85rem;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+}
+
+
+.email-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px 22px;
+
+    margin-top: 25px;
+
+}
+
+
+.email-list a {
+
+    color: var(--purple);
+
+    font-size: 0.82rem;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.email-list a:hover {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   MEMBER GRID
+========================================================= */
+
+.members-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+}
+
+
+/* =========================================================
+   MEMBER CARD
+========================================================= */
+
+.member-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.member-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-hover);
+
+    border-color:
+        rgba(102, 82, 122, 0.22);
+
+}
+
+
+/* =========================================================
+   MEMBER IMAGE
+========================================================= */
+
+.member-image {
+
+    width: 100%;
+
+    padding-top: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.member-image img {
+
+    width: 180px;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 7px 20px rgba(73, 56, 93, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.member-card:hover .member-image img {
+
+    transform: scale(1.025);
+
+    box-shadow:
+        0 10px 25px rgba(73, 56, 93, 0.12);
+
+}
+
+
+/* =========================================================
+   MEMBER INFORMATION
+========================================================= */
+
+.member-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 24px 25px 27px;
+
+    text-align: center;
+
+}
+
+
+.member-info h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--purple-dark);
+
+    font-size: 1.18rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    margin-bottom: 7px;
+
+}
+
+
+.member-info .member-role {
+
+    margin-bottom: 15px;
+
+}
+
+
+.member-info .interest {
+
+    font-size: 0.80rem;
+
+    line-height: 1.75;
+
+    min-height: 70px;
+
+}
+
+
+.member-info .member-quote {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.80rem;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+}
+
+
+.member-email {
+
+    display: inline-block;
+
+    color: var(--purple);
+
+    font-size: 0.76rem;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.member-email:hover {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   ALUMNI
+========================================================= */
+
+.alumni-section {
+
+    margin-bottom: 30px;
+
+}
+
+
+.alumni-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+
+.alumni-card {
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.alumni-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+    border-color:
+        rgba(102, 82, 122, 0.20);
+
+}
+
+
+.alumni-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--purple-dark);
+
+    font-size: 1.08rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    margin-bottom: 7px;
+
+}
+
+
+.alumni-card p {
+
+    color: var(--text-light);
+
+    font-size: 0.80rem;
+
+    line-height: 1.65;
+
+}
+
+
+.alumni-card .alumni-degree {
+
+    color: var(--green);
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding: 30px 0;
+
+    background: #f1edf4;
+
+    border-top:
+        1px solid rgba(73, 56, 93, 0.10);
+
+    text-align: center;
+
+}
+
+
+.site-footer small {
+
+    color: var(--purple);
+
+    font-size: 0.78rem;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+
+        gap: 12px;
+
+    }
+
+
+    .nav-link {
+
+        padding: 8px 7px;
+
+        font-size: 0.82rem;
+
+    }
+
+
+    .members-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .alumni-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+
+        min-height: 75px;
+
+    }
+
+
+    .nav-logo {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+
+    .brand {
+
+        font-size: 1.12rem;
+
+    }
+
+
+    .brand small {
+
+        font-size: 0.65rem;
+
+    }
+
+
+    .nav-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        padding: 15px 20px 20px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        border-bottom:
+            1px solid rgba(73, 56, 93, 0.10);
+
+        box-shadow:
+            0 10px 25px rgba(73, 56, 93, 0.08);
+
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-link {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 11px 13px;
+
+        font-size: 0.88rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+
+        width: min(100% - 28px, 1180px);
+
+    }
+
+
+    .page-intro {
+
+        padding-top: 55px;
+
+        padding-bottom: 45px;
+
+    }
+
+
+    .page-intro h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 0.90rem;
+
+    }
+
+
+    .member-section {
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 1.65rem;
+
+    }
+
+
+    .section-heading p {
+
+        font-size: 0.80rem;
+
+    }
+
+
+    .pi-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 30px 22px;
+
+        text-align: center;
+
+    }
+
+
+    .pi-image img {
+
+        width: 200px;
+
+        height: 260px;
+
+    }
+
+
+    .pi-content {
+
+        padding-right: 0;
+
+    }
+
+
+    .pi-content h3 {
+
+        font-size: 1.55rem;
+
+    }
+
+
+    .email-list {
+
+        justify-content: center;
+
+    }
+
+
+    .members-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .alumni-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .member-image img {
+
+        width: 180px;
+
+        height: 230px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+
+        width: calc(100% - 24px);
+
+    }
+
+
+    .brand {
+
+        font-size: 1rem;
+
+    }
+
+
+    .brand small {
+
+        font-size: 0.60rem;
+
+    }
+
+
+    .nav-logo {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+
+    .page-intro {
+
+        padding-top: 45px;
+
+        padding-bottom: 40px;
+
+    }
+
+
+    .page-intro h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .section-heading {
+
+        gap: 12px;
+
+    }
+
+
+    .section-number {
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 0.68rem;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .pi-card {
+
+        padding: 25px 17px;
+
+    }
+
+
+    .pi-content h3 {
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .member-info {
+
+        padding: 22px 18px;
+
+    }
+
+
+    .member-info h3 {
+
+        font-size: 1.12rem;
+
+    }
+
+
+    .alumni-card {
+
+        padding: 22px 20px;
+
+    }
+
+}
