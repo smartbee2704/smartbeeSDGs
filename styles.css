@@ -281,7 +281,7 @@ main {
         linear-gradient(
             135deg,
             rgba(250, 248, 243, 0.16),
-            rgba(250, 248, 243, 0.26)
+            rgba(250, 248, 243, 0.30)
         );
 
     pointer-events: none;
@@ -292,7 +292,24 @@ main {
 /* =========================================================
    SECTION OVERLAY
 ========================================================= */
+.section-overlay {
 
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(250, 248, 243, 0.15),
+            rgba(250, 248, 243, 0.72)
+        );
+
+    pointer-events: none;
+
+}
 
 
 
