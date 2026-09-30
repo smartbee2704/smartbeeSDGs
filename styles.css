@@ -1133,10 +1133,10 @@ main {
     scroll-behavior: smooth;
 
     /* 1. Push the scrollbar track away from the bottom of the cards */
-    padding-bottom: 20px !important;
+    padding-bottom: 10px !important;
 
     /* 2. Optional: Push content below the slider away from the scrollbar */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     /* Show scrollbar */
     scrollbar-width: auto;
