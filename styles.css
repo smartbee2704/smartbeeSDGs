@@ -303,8 +303,8 @@ main {
     background:
         radial-gradient(
             circle at center,
-            rgba(250, 248, 243, 0.15),
-            rgba(250, 248, 243, 0.45)
+            rgba(250, 248, 243, 0.16),
+            rgba(250, 248, 243, 0.38)
         );
 
     pointer-events: none;
