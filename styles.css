@@ -960,7 +960,7 @@ main {
 
     width: 100%;
 
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
 
     scroll-snap-type: x mandatory;
@@ -976,6 +976,7 @@ main {
 
 .about-slider::-webkit-scrollbar {
     height: 8px;
+    display: block;
 }
 
 .about-slider::-webkit-scrollbar-track {
