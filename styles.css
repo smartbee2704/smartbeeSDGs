@@ -960,25 +960,29 @@ main {
 
     width: 100%;
 
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
     -webkit-overflow-scrolling: touch;
-
-   /* Standard scrollbar properties */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(102, 82, 122, 0.4) rgba(102, 82, 122, 0.08);
+ 
+    scrollbar-width: auto;
 }
 
+.scroll-hint {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #66527a;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
 /* Chrome / Safari scrollbar */
 
 .about-slider::-webkit-scrollbar {
     height: 8px;
-    display: block;
 }
 
 .about-slider::-webkit-scrollbar-track {
