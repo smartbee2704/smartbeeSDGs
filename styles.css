@@ -968,7 +968,9 @@ main {
 
     -webkit-overflow-scrolling: touch;
 
-    scrollbar-width: auto;
+   /* Standard scrollbar properties */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(102, 82, 122, 0.4) rgba(102, 82, 122, 0.08);
 }
 
 
