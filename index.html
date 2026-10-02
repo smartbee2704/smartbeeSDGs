@@ -610,9 +610,9 @@
 
         </div>
 
-			<button class="slider-arrow slider-arrow-right" onclick="scrollSlider(this, 1)">
+		<button class="slider-arrow slider-arrow-right" onclick="scrollSlider(this, 1)">
         ›
-    </button>. 
+    </button>
 
     </div>
 
@@ -1325,16 +1325,44 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollSlider(button, direction) {
 
     const wrapper = button.closest(".slider-wrapper");
+    const slider = wrapper.querySelector(".about-slider, .news-slider");
 
-    const slider = wrapper.querySelector(
-        ".about-slider, .news-slider"
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll(
+        ".about-slide, .news-slide"
     );
 
-    slider.scrollBy({
-        left: direction * slider.clientWidth,
+    if (!slides.length) return;
+
+    const slideWidth = slider.clientWidth;
+
+    const currentIndex = Math.round(
+        slider.scrollLeft / slideWidth
+    );
+
+    let newIndex = currentIndex + direction;
+
+    /* =========================================
+       LOOP FROM FIRST → LAST
+    ========================================= */
+
+    if (newIndex < 0) {
+        newIndex = slides.length - 1;
+    }
+
+    /* =========================================
+       LOOP FROM LAST → FIRST
+    ========================================= */
+
+    if (newIndex >= slides.length) {
+        newIndex = 0;
+    }
+
+    slider.scrollTo({
+        left: newIndex * slideWidth,
         behavior: "smooth"
     });
-
 }
 
 </script>
