@@ -347,7 +347,13 @@
 
     <div class="container">
 
-        <div class="about-slider">
+        <div class="slider-wrapper">
+
+          <button class="slider-arrow slider-arrow-left" onclick="scrollSlider(this, -1)">
+           ‹
+          </button>
+
+      <div class="about-slider">
 
             <!-- ================= ABOUT 1 ================= -->
             <div class="about-slide">
@@ -603,6 +609,10 @@
             </div>
 
         </div>
+
+			<button class="slider-arrow slider-arrow-right" onclick="scrollSlider(this, 1)">
+        ›
+    </button>
 
     </div>
 
@@ -1309,6 +1319,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<script>
+
+function scrollSlider(button, direction) {
+
+    const wrapper = button.closest(".slider-wrapper");
+
+    const slider = wrapper.querySelector(
+        ".about-slider, .news-slider"
+    );
+
+    slider.scrollBy({
+        left: direction * slider.clientWidth,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+	
 
 </body>
 </html>
