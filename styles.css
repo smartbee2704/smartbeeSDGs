@@ -1482,19 +1482,37 @@ main {
 
 @media (max-width: 768px) {
 
-    .slider-arrow {
-        width: 36px;
-        height: 36px;
-
-        font-size: 27px;
+    /* Make room for the arrows */
+    .about-slide {
+        padding-left: 36px;
+        padding-right: 36px;
+        box-sizing: border-box;
     }
+
+
+    /* Arrow */
+
+    .slider-arrow {
+        width: 32px;
+        height: 32px;
+
+        font-size: 24px;
+
+        z-index: 100;
+    }
+
+
+    /* Left arrow */
 
     .slider-arrow-left {
-        left: 5px;
+        left: 0;
     }
 
+
+    /* Right arrow */
+
     .slider-arrow-right {
-        right: 5px;
+        right: 0;
     }
 
 }
