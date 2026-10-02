@@ -971,14 +971,6 @@ main {
     scrollbar-width: auto;
 }
 
-.scroll-hint {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #66527a;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
 /* Chrome / Safari scrollbar */
 
 .about-slider::-webkit-scrollbar {
