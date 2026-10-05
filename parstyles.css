@@ -1,0 +1,1209 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --purple: #66527a;
+    --purple-dark: #49385d;
+    --purple-light: #eee9f4;
+
+    --gold: #d6a442;
+    --gold-light: #f3e5bd;
+
+    --green: #2f6e35;
+    --green-light: #e8f1e8;
+
+    --cream: #faf8f3;
+
+    --text: #34303a;
+    --text-light: #6f6975;
+
+    --white: #ffffff;
+
+    --border:
+        rgba(73, 56, 93, 0.12);
+
+    --shadow:
+        0 10px 35px
+        rgba(73, 56, 93, 0.08);
+
+    --shadow-hover:
+        0 18px 45px
+        rgba(73, 56, 93, 0.14);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid
+        rgba(73, 56, 93, 0.10);
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+.nav-logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #2f6e35;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    text-decoration: none;
+
+}
+
+
+.brand small {
+
+    margin-top: 3px;
+
+    color: #607d8b;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 0.70rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-link {
+
+    display: inline-block;
+
+    padding: 9px 10px;
+
+    color: var(--purple-dark);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.nav-link:hover {
+
+    color: white;
+
+    background: var(--purple);
+
+    transform: translateY(-1px);
+
+}
+
+
+.nav-link.active {
+
+    color: white;
+
+    background: var(--purple);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.nav-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--purple-dark);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+        80px 20px 65px;
+
+    text-align: center;
+
+}
+
+
+.eyebrow {
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+}
+
+
+.page-intro h1 {
+
+    margin: 0 0 18px;
+
+    color: var(--purple-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            2.7rem,
+            5vw,
+            4.2rem
+        );
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+}
+
+
+.intro-text {
+
+    max-width: 680px;
+
+    margin:
+        0 auto;
+
+    color: var(--text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   PARTNER SECTIONS
+========================================================= */
+
+.partner-section {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0 auto 75px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.section-number {
+
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--purple-light);
+
+    color: var(--purple-dark);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+}
+
+
+.section-heading h2 {
+
+    margin:
+        0 0 5px;
+
+    color: var(--purple-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+}
+
+
+.section-heading p {
+
+    max-width: 760px;
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   PARTNER GRID
+========================================================= */
+
+.partner-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+}
+
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.partner-card {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 24px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.partner-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-hover);
+
+    border-color:
+        rgba(102, 82, 122, 0.22);
+
+}
+
+
+/* =========================================================
+   PARTNER LOGO
+========================================================= */
+
+.partner-logo {
+
+    width: 90px;
+
+    height: 90px;
+
+    flex:
+        0 0 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        rgba(73, 56, 93, 0.08);
+
+    border-radius: 14px;
+
+}
+
+
+.partner-logo img {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   PARTNER CONTENT
+========================================================= */
+
+.partner-content {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.partner-content h3 {
+
+    margin:
+        0 0 4px;
+
+    color: var(--purple-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 1.18rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+}
+
+
+.partner-location {
+
+    margin:
+        0 0 10px;
+
+    color: var(--gold);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+}
+
+
+.partner-content > p:not(.partner-location) {
+
+    margin:
+        0 0 13px;
+
+    color: var(--text-light);
+
+    font-size: 0.84rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   PARTNER LINK
+========================================================= */
+
+.partner-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--purple);
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+
+}
+
+
+.partner-link:hover {
+
+    color: var(--purple-dark);
+
+    gap: 9px;
+
+}
+
+
+.partner-link span {
+
+    font-size: 0.95rem;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    width: 100%;
+
+    margin-top: 60px;
+
+    padding:
+        20px 40px;
+
+    background: transparent;
+
+    position: relative;
+
+    z-index: 10;
+
+    box-sizing: border-box;
+
+}
+
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+}
+
+
+.footer-left {
+
+    text-align: left;
+
+    display: flex;
+
+    align-items: center;
+
+    flex: 1;
+
+}
+
+
+.copyright-left {
+
+    color: #49385d;
+
+    font-size: 0.82rem;
+
+    margin: 0;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+}
+
+
+.footer-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    text-align: right;
+
+    gap: 8px;
+
+    flex: 1;
+
+}
+
+
+.university-location {
+
+    color: #49385d;
+
+    font-size: 0.82rem;
+
+    line-height: 1.4;
+
+    max-width: 370px;
+
+    font-weight: 500;
+
+}
+
+
+.footer-logos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.footer-logo {
+
+    height: 32px;
+
+    width: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+
+    /* Header */
+
+    .nav-links {
+
+        gap: 12px;
+
+    }
+
+
+    .nav-link {
+
+        padding:
+            8px 7px;
+
+        font-size: 0.82rem;
+
+    }
+
+
+    /* Partner cards */
+
+    .partner-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .nav {
+
+        min-height: 75px;
+
+    }
+
+
+    .nav-logo {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+
+    .brand {
+
+        font-size: 1.12rem;
+
+    }
+
+
+    .brand small {
+
+        font-size: 0.65rem;
+
+    }
+
+
+    .nav-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        padding:
+            15px 20px 20px;
+
+        background:
+            rgba(255, 255, 255, 0.98);
+
+        border-bottom:
+            1px solid
+            rgba(73, 56, 93, 0.10);
+
+        box-shadow:
+            0 10px 25px
+            rgba(73, 56, 93, 0.08);
+
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-link {
+
+        display: block;
+
+        width: 100%;
+
+        padding:
+            11px 13px;
+
+        font-size: 0.88rem;
+
+    }
+
+
+    /* Page */
+
+    .page-intro {
+
+        padding:
+            65px 20px 50px;
+
+    }
+
+
+    .partner-section {
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .section-heading {
+
+        gap: 14px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .partner-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .section-heading {
+
+        align-items: flex-start;
+
+    }
+
+
+    .section-number {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 1.65rem;
+
+    }
+
+
+    .partner-card {
+
+        padding: 20px;
+
+        gap: 16px;
+
+    }
+
+
+    .partner-logo {
+
+        width: 78px;
+
+        height: 78px;
+
+        flex-basis: 78px;
+
+    }
+
+
+    .footer-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .footer-right {
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .brand {
+
+        font-size: 1rem;
+
+    }
+
+
+    .brand small {
+
+        font-size: 0.60rem;
+
+    }
+
+
+    .nav-logo {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+
+    .page-intro {
+
+        padding:
+            55px 16px 45px;
+
+    }
+
+
+    .partner-section {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .section-heading {
+
+        gap: 11px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .section-heading p {
+
+        font-size: 0.82rem;
+
+    }
+
+
+    .partner-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .partner-logo {
+
+        width: 90px;
+
+        height: 90px;
+
+        flex-basis: 90px;
+
+    }
+
+
+    .site-footer {
+
+        padding:
+            20px 12px;
+
+    }
+
+
+    .copyright-left {
+
+        white-space: normal;
+
+        text-align: center;
+
+    }
+
+
+    .university-location {
+
+        font-size: 0.76rem;
+
+    }
+
+}
