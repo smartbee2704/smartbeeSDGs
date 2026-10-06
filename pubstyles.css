@@ -687,7 +687,7 @@ a {
 
 .btn-primary:hover {
 
-    background: var(--purple-dark);
+    background: #fac352;
 
     transform: translateY(-2px);
 
