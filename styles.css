@@ -1111,21 +1111,16 @@ main {
 
     display: flex;
 
-    align-items: center;
+    align-items: right;
 
-    justify-content: center;
+    justify-content: right;
 
 }
 
 
 .about-image img {
 
-    width: 100%;
-
-    max-width: 420px;
-
-    max-height: 400px;
-
+    width: 90%;
     object-fit: contain;
 
 }
