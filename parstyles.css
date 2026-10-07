@@ -1,3 +1,4 @@
+
 /* =========================================================
    ROOT
 ========================================================= */
@@ -317,7 +318,7 @@ body {
     margin: 0 auto;
 
     padding:
-        80px 20px 65px;
+        80px 20px 70px;
 
     text-align: center;
 
@@ -382,10 +383,10 @@ body {
 
 
 /* =========================================================
-   PARTNER SECTIONS
+   COLLABORATION SECTION
 ========================================================= */
 
-.partner-section {
+.collaboration-section {
 
     width:
         min(
@@ -394,7 +395,7 @@ body {
         );
 
     margin:
-        0 auto 75px;
+        0 auto 100px;
 
 }
 
@@ -411,7 +412,7 @@ body {
 
     gap: 18px;
 
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
 }
 
@@ -445,10 +446,30 @@ body {
 }
 
 
+/* Small gold heading above title */
+
+.section-eyebrow {
+
+    margin:
+        0 0 4px;
+
+    color: var(--gold);
+
+    font-size: 0.70rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+}
+
+
 .section-heading h2 {
 
     margin:
-        0 0 5px;
+        0 0 7px;
 
     color: var(--purple-dark);
 
@@ -465,7 +486,7 @@ body {
 }
 
 
-.section-heading p {
+.section-heading > div > p:not(.section-eyebrow) {
 
     max-width: 760px;
 
@@ -475,142 +496,205 @@ body {
 
     font-size: 0.88rem;
 
-    line-height: 1.5;
+    line-height: 1.55;
 
 }
 
 
 /* =========================================================
-   PARTNER GRID
+   COLLABORATION TABS
 ========================================================= */
 
-.partner-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 22px;
-
-}
-
-
-/* =========================================================
-   PARTNER CARD
-========================================================= */
-
-.partner-card {
-
-    min-width: 0;
+.collaboration-tabs {
 
     display: flex;
 
-    align-items: flex-start;
+    flex-wrap: wrap;
 
-    gap: 20px;
+    gap: 10px;
 
-    padding: 24px;
+    margin-bottom: 22px;
+
+}
+
+
+/* Individual tab */
+
+.collaboration-tab {
+
+    appearance: none;
+
+    border: 1px solid
+        rgba(102, 82, 122, 0.20);
+
+    border-radius: 30px;
+
+    padding:
+        10px 18px;
 
     background:
-        rgba(255, 255, 255, 0.78);
+        rgba(255, 255, 255, 0.70);
+
+    color: var(--purple-dark);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.collaboration-tab:hover {
+
+    border-color:
+        var(--purple);
+
+    background:
+        var(--purple-light);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* Active tab */
+
+.collaboration-tab.active {
+
+    border-color:
+        var(--purple);
+
+    background:
+        var(--purple);
+
+    color:
+        var(--white);
+
+    box-shadow:
+        0 7px 18px
+        rgba(73, 56, 93, 0.16);
+
+}
+
+
+/* =========================================================
+   COLLABORATION PANEL
+========================================================= */
+
+.collaboration-panel {
+
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 42px 48px;
+
+    background:
+        rgba(255, 255, 255, 0.80);
 
     border:
         1px solid var(--border);
 
-    border-radius: 20px;
-
-    box-shadow: var(--shadow);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-
-}
-
-
-.partner-card:hover {
-
-    transform:
-        translateY(-5px);
+    border-radius: 24px;
 
     box-shadow:
-        var(--shadow-hover);
-
-    border-color:
-        rgba(102, 82, 122, 0.22);
+        var(--shadow);
 
 }
 
 
 /* =========================================================
-   PARTNER LOGO
+   COLLABORATION CONTENT
 ========================================================= */
 
-.partner-logo {
+.collaboration-content {
 
-    width: 90px;
+    display: none;
 
-    height: 90px;
-
-    flex:
-        0 0 90px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 10px;
-
-    background:
-        var(--white);
-
-    border:
-        1px solid
-        rgba(73, 56, 93, 0.08);
-
-    border-radius: 14px;
+    animation:
+        collaborationFade
+        0.35s ease;
 
 }
 
 
-.partner-logo img {
+.collaboration-content.active {
 
     display: block;
 
-    max-width: 100%;
+}
 
-    max-height: 100%;
 
-    width: auto;
+@keyframes collaborationFade {
 
-    height: auto;
+    from {
 
-    object-fit: contain;
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
 
 }
 
 
 /* =========================================================
-   PARTNER CONTENT
+   PANEL LABEL
 ========================================================= */
 
-.partner-content {
+.panel-label {
 
-    min-width: 0;
+    display: inline-block;
 
-    flex: 1;
+    margin-bottom: 10px;
+
+    color: var(--gold);
+
+    font-size: 0.70rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
 
 }
 
 
-.partner-content h3 {
+/* =========================================================
+   PANEL TITLE
+========================================================= */
+
+.collaboration-content h3 {
 
     margin:
-        0 0 4px;
+        0 0 5px;
 
     color: var(--purple-dark);
 
@@ -618,23 +702,101 @@ body {
         "Playfair Display",
         serif;
 
-    font-size: 1.18rem;
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            2.5rem
+        );
 
     font-weight: 600;
 
-    line-height: 1.3;
+    line-height: 1.2;
 
 }
 
 
-.partner-location {
+/* =========================================================
+   PANEL LOCATION
+========================================================= */
+
+.panel-location {
 
     margin:
-        0 0 10px;
+        0 0 17px;
 
     color: var(--gold);
 
     font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   PANEL DESCRIPTION
+========================================================= */
+
+.panel-description {
+
+    max-width: 850px;
+
+    margin:
+        0;
+
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.panel-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+        27px 0;
+
+    background:
+        rgba(73, 56, 93, 0.10);
+
+}
+
+
+/* =========================================================
+   COLLABORATOR BLOCK
+========================================================= */
+
+.collaborator-block {
+
+    margin-bottom: 24px;
+
+}
+
+
+.collaborator-block h4,
+.evidence-block h4 {
+
+    margin:
+        0 0 11px;
+
+    color: var(--purple-dark);
+
+    font-size: 0.78rem;
 
     font-weight: 700;
 
@@ -645,16 +807,79 @@ body {
 }
 
 
-.partner-content > p:not(.partner-location) {
+/* =========================================================
+   COLLABORATOR LIST
+========================================================= */
 
-    margin:
-        0 0 13px;
+.collaborator-list {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.collaborator-list li {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding-left: 17px;
+
+    border-left:
+        3px solid var(--gold);
+
+}
+
+
+.collaborator-list strong {
+
+    color: var(--purple-dark);
+
+    font-size: 0.90rem;
+
+    font-weight: 700;
+
+}
+
+
+.collaborator-list span {
 
     color: var(--text-light);
 
-    font-size: 0.84rem;
+    font-size: 0.82rem;
 
-    line-height: 1.6;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.evidence-block {
+
+    margin-bottom: 23px;
+
+}
+
+
+.evidence-block p {
+
+    max-width: 850px;
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 0.82rem;
+
+    line-height: 1.65;
 
 }
 
@@ -715,9 +940,10 @@ body {
     margin-top: 60px;
 
     padding:
-        20px 40px;
+        24px 40px;
 
-    background: transparent;
+    background:
+        var(--purple);
 
     position: relative;
 
@@ -762,7 +988,7 @@ body {
 
 .copyright-left {
 
-    color: #49385d;
+    color: var(--white);
 
     font-size: 0.82rem;
 
@@ -794,7 +1020,7 @@ body {
 
 .university-location {
 
-    color: #49385d;
+    color: var(--white);
 
     font-size: 0.82rem;
 
@@ -855,12 +1081,12 @@ body {
     }
 
 
-    /* Partner cards */
+    /* Collaboration panel */
 
-    .partner-grid {
+    .collaboration-panel {
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        padding:
+            36px 38px;
 
     }
 
@@ -984,9 +1210,9 @@ body {
     }
 
 
-    .partner-section {
+    .collaboration-section {
 
-        margin-bottom: 60px;
+        margin-bottom: 75px;
 
     }
 
@@ -1005,9 +1231,35 @@ body {
     }
 
 
-    .partner-grid {
+    /* Tabs */
 
-        grid-template-columns: 1fr;
+    .collaboration-tabs {
+
+        gap: 8px;
+
+    }
+
+
+    .collaboration-tab {
+
+        padding:
+            9px 15px;
+
+        font-size: 0.78rem;
+
+    }
+
+
+    /* Panel */
+
+    .collaboration-panel {
+
+        min-height: 330px;
+
+        padding:
+            32px 30px;
+
+        border-radius: 20px;
 
     }
 
@@ -1046,25 +1298,78 @@ body {
     }
 
 
-    .partner-card {
+    .section-eyebrow {
 
-        padding: 20px;
-
-        gap: 16px;
+        font-size: 0.64rem;
 
     }
 
 
-    .partner-logo {
+    .section-heading > div > p:not(.section-eyebrow) {
 
-        width: 78px;
-
-        height: 78px;
-
-        flex-basis: 78px;
+        font-size: 0.82rem;
 
     }
 
+
+    /* Tabs become easier to tap */
+
+    .collaboration-tabs {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 7px;
+
+    }
+
+
+    .collaboration-tab {
+
+        width: 100%;
+
+        text-align: left;
+
+        padding:
+            11px 15px;
+
+        border-radius: 12px;
+
+    }
+
+
+    /* Panel */
+
+    .collaboration-panel {
+
+        min-height: auto;
+
+        padding:
+            28px 22px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .collaboration-content h3 {
+
+        font-size: 1.75rem;
+
+    }
+
+
+    .panel-description {
+
+        font-size: 0.88rem;
+
+    }
+
+
+    /* Footer */
 
     .footer-container {
 
@@ -1073,6 +1378,15 @@ body {
         align-items: center;
 
         text-align: center;
+
+        gap: 18px;
+
+    }
+
+
+    .footer-left {
+
+        justify-content: center;
 
     }
 
@@ -1134,7 +1448,7 @@ body {
     }
 
 
-    .partner-section {
+    .collaboration-section {
 
         width:
             calc(100% - 24px);
@@ -1156,29 +1470,24 @@ body {
     }
 
 
-    .section-heading p {
+    .section-heading > div > p:not(.section-eyebrow) {
 
-        font-size: 0.82rem;
-
-    }
-
-
-    .partner-card {
-
-        flex-direction: column;
-
-        align-items: flex-start;
+        font-size: 0.80rem;
 
     }
 
 
-    .partner-logo {
+    .collaboration-panel {
 
-        width: 90px;
+        padding:
+            24px 18px;
 
-        height: 90px;
+    }
 
-        flex-basis: 90px;
+
+    .collaboration-content h3 {
+
+        font-size: 1.55rem;
 
     }
 
