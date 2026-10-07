@@ -2475,6 +2475,13 @@ main {
 
     }
 
+   .about-image2 img {
+
+        max-width: 230px;
+
+        max-height: 170px;
+
+    }
 
     /* NEWS */
 
