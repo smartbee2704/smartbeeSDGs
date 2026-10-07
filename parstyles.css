@@ -942,9 +942,6 @@ body {
     padding:
         24px 40px;
 
-    background:
-        var(--purple);
-
     position: relative;
 
     z-index: 10;
@@ -988,7 +985,7 @@ body {
 
 .copyright-left {
 
-    color: var(--white);
+    color: var(--purple);
 
     font-size: 0.82rem;
 
@@ -1020,7 +1017,7 @@ body {
 
 .university-location {
 
-    color: var(--white);
+    color: var(--purple);
 
     font-size: 0.82rem;
 
