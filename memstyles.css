@@ -771,15 +771,9 @@ a {
 
 
 .email-list {
-
     display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px 22px;
-
-    margin-top: 25px;
-
+    flex-direction: column;
+    gap: 12px;
 }
 
 
@@ -800,31 +794,17 @@ a {
 
 }
 
+
+
 .email-row {
     display: flex;
-
+    align-items: center;
+    gap: 25px;
     flex-wrap: wrap;
-
-    gap: 8px 22px;
-
-    margin-top: 25px;
 }
 
 .email-row a {
-
-    color: var(--purple);
-
-    font-size: 0.82rem;
-
-    transition: color 0.2s ease;
-
-}
-
-
-.email-rowt a:hover {
-
-    color: var(--gold);
-
+    text-decoration: none;
 }
 
 
