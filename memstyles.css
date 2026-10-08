@@ -701,7 +701,7 @@ a {
 
 .member-role {
 
-    color: var(--green);
+    color: var(--gold);
 
     font-size: 0.76rem;
 
@@ -796,7 +796,7 @@ a {
 
 .email-list a:hover {
 
-    color: var(--green);
+    color: var(--gold);
 
 }
 
