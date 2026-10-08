@@ -876,20 +876,14 @@ a {
     font-size: 0.76rem;
     font-weight: 500;
     color: var(--purple, #4b2e83);
-    background-color: rgba(75, 46, 131, 0.06); /* Light tint matching your purple theme */
+    
     padding: 5px 12px;
-    border-radius: 20px;
-    text-decoration: none;
-    border: 1px solid rgba(75, 46, 131, 0.15);
-    transition: all 0.25s ease;
+   
+   
 }
 
 .profile-link:hover {
-    color: #ffffff;
-    background-color: var(--purple, #4b2e83);
-    border-color: var(--purple, #4b2e83);
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    color: var(--gold);
 }
 
 
