@@ -800,6 +800,33 @@ a {
 
 }
 
+.email-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px 22px;
+
+    margin-top: 25px;
+}
+
+.email-row a {
+
+    color: var(--purple);
+
+    font-size: 0.82rem;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.email-rowt a:hover {
+
+    color: var(--gold);
+
+}
+
 
 /* =========================================================
    EDUCATION + EXPERTISE
