@@ -795,13 +795,12 @@ a {
 }
 
 
-
 .email-row {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    flex-wrap: wrap;
 }
+
 
 .email-row a {
     text-decoration: none;
