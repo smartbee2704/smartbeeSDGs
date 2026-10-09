@@ -961,7 +961,7 @@ main {
     grid-area: logos;
 
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: flex-start;
 
     gap: 22px;
@@ -974,7 +974,7 @@ main {
 .history-logo-item {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: right;
     justify-content: flex-start;
 
     gap: 8px;
@@ -987,7 +987,7 @@ main {
     display: block;
 
     width: 100%;
-    height: 50px;
+    height: 60px;
 
     object-fit: contain;
 }
@@ -1002,7 +1002,7 @@ main {
     color: var(--purple);
 
     font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 600;
     line-height: 1.4;
 
