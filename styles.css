@@ -903,553 +903,250 @@ main {
    LAB HISTORY & LEGACY
 ========================================================= */
 
-/* Background */
+/* =========================================================
+LAB HISTORY & LEGACY
+========================================================= */
 
+/* History section layout */
+.page-section.history-section {
+position: relative;
+width: 100%;
+height: 100vh;
+min-height: 100vh;
+padding-top: var(--header-height);
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+/* Background image */
 .history-section .section-background {
-
-    background-image: url("BG7.png");
-
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-
+position: absolute;
+z-index: 0;
+top: 4%;
+left: 5%;
+width: 90%;
+height: 88%;
+border-radius: 28px;
+background-image: url("BG7.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
 }
 
-
-/* =========================================================
-   HISTORY LAYOUT
-========================================================= */
-
-.history-wrapper {
-
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
+/* Overlay */
+.history-section .section-overlay {
+position: absolute;
+inset: 0;
+z-index: 1;
+pointer-events: none;
 }
 
-
-.history-box {
-
-    width: 100%;
-    max-width: 1100px;
-
-    min-height: 570px;
-
-    padding: 2rem;
-
-    box-sizing: border-box;
-
-    display: grid;
-
-    grid-template-columns: 1.2fr 0.8fr;
-
-    gap: 2.5rem;
-
-    align-items: center;
-
+/* Content container */
+.history-section > .container {
+position: relative;
+z-index: 2;
+width: 100%;
+max-width: 1180px;
+height: auto;
+margin: 0 auto;
+padding: 0 2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
 }
 
-
-/* =========================================================
-   HISTORY TEXT
-========================================================= */
-
-.history-content {
-
-    min-width: 0;
-
+/* Wrapper */
+.history-section .history-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
 }
 
-
-.history-content h2 {
-
-    margin-top: 0;
-
-    margin-bottom: 1rem;
-
-    color: var(--purple);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
-
-    line-height: 1.3;
-
+/* Main glass card */
+.history-section .history-box {
+display: grid;
+grid-template-columns: 1.2fr 0.8fr;
+align-items: center;
+gap: 2.5rem;
+width: 100%;
+max-width: 1100px;
+min-height: 570px;
+height: auto;
+max-height: calc(100vh - 125px);
+margin: 0 auto;
+padding: 2rem;
+overflow-y: auto;
+overflow-x: hidden;
+box-sizing: border-box;
 }
 
-
-.history-content p {
-
-    margin-top: 0;
-
-    margin-bottom: 0.85rem;
-
-    color: #453e49;
-
-    font-size: 0.87rem;
-
-    line-height: 1.7;
-
+/* Text content */
+.history-section .history-content {
+min-width: 0;
 }
 
-
-.history-content .text-justify {
-
-    text-align: justify;
-
+.history-section .history-content .section-kicker {
+display: block;
+margin-bottom: 0.35rem;
+color: var(--gold);
+font-size: 0.72rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
 }
 
-
-/* =========================================================
-   FOUNDER IMAGE
-========================================================= */
-
-.history-image {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
-
-    min-width: 0;
-
+.history-section .history-content h2 {
+margin: 0 0 1rem;
+color: var(--purple);
+font-family: "Playfair Display", serif;
+font-size: clamp(1.7rem, 3vw, 2.5rem);
+line-height: 1.3;
 }
 
-
-.history-image img {
-
-    display: block;
-
-    width: 100%;
-
-    max-width: 350px;
-
-    height: auto;
-
-    max-height: 440px;
-
-    object-fit: contain;
-
-    border-radius: 12px;
-
+.history-section .history-content p {
+margin: 0 0 0.85rem;
+color: #453e49;
+font-size: 0.87rem;
+line-height: 1.7;
+overflow-wrap: anywhere;
 }
 
+.history-section .history-content .text-justify {
+text-align: justify;
+}
+
+/* Tribute */
+.history-section .history-tribute {
+margin-top: 1.2rem;
+padding: 0.8rem 1rem;
+border-left: 3px solid var(--gold);
+background: rgba(102, 82, 122, 0.06);
+}
+
+.history-section .history-tribute .tribute-title {
+margin-bottom: 0.25rem;
+color: var(--purple);
+font-family: "Playfair Display", serif;
+font-size: 1.05rem;
+font-weight: 600;
+}
+
+.history-section .history-tribute .tribute-text {
+margin-bottom: 0;
+color: #65546e;
+font-size: 0.85rem;
+font-style: italic;
+line-height: 1.6;
+}
+
+/* Founder image */
+.history-section .history-image {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+min-width: 0;
+}
+
+.history-section .history-image img {
+display: block;
+width: 100%;
+max-width: 350px;
+height: auto;
+max-height: 440px;
+object-fit: contain;
+border-radius: 12px;
+}
 
 /* Image caption */
-
-.history-caption {
-
-    width: 100%;
-
-    max-width: 350px;
-
-    margin-top: 1rem;
-
-    text-align: center;
-
-    color: var(--purple);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 1rem;
-
-    font-weight: 600;
-
-    line-height: 1.5;
-
+.history-section .history-caption {
+width: 100%;
+max-width: 350px;
+margin-top: 1rem;
+color: var(--purple);
+font-family: "Playfair Display", serif;
+font-size: 1rem;
+font-weight: 600;
+line-height: 1.5;
+text-align: center;
 }
 
+.history-section .history-caption span {
+display: block;
+margin-top: 0.2rem;
+color: #746b79;
+font-family: "Inter", sans-serif;
+font-size: 0.78rem;
+font-weight: 400;
+}
 
-.history-caption span {
+/* =========================================================
+HISTORY: MOBILE RESPONSIVE
+========================================================= */
 
+@media screen and (max-width: 700px) {
+
+```
+/* Let the main scroller move through the full section */
+main {
+    scroll-snap-type: none !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Allow History to grow with all its content */
+.page-section.history-section {
+    position: relative;
     display: block;
-
-    margin-top: 0.2rem;
-
-    color: #746b79;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 0.78rem;
-
-    font-weight: 400;
-
-}
-
-
-/* =========================================================
-   FOUNDER TRIBUTE
-========================================================= */
-
-.history-tribute {
-
-    margin-top: 1.2rem;
-
-    padding: 0.8rem 1rem;
-
-    border-left: 3px solid var(--gold);
-
-    background: rgba(102, 82, 122, 0.06);
-
-}
-
-
-.history-tribute .tribute-title {
-
-    margin-bottom: 0.25rem;
-
-    color: var(--purple);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 1.05rem;
-
-    font-weight: 600;
-
-}
-
-
-.history-tribute .tribute-text {
-
-    margin-bottom: 0;
-
-    color: #65546e;
-
-    font-size: 0.85rem;
-
-    font-style: italic;
-
-    line-height: 1.6;
-
-}
-
-
-/* =========================================================
-   MOBILE RESPONSIVE
-========================================================= */
-
-/* =========================================================
-   HISTORY & LEGACY - MOBILE FIX
-========================================================= */
-
-@media screen and (max-width: 700px) {
-
-    /* Let the History section grow with its content */
-    main .page-section.history-section {
-
-        display: block !important;
-
-        position: relative;
-
-        height: auto !important;
-
-        min-height: 100vh;
-
-        overflow: visible !important;
-
-        padding-top: 100px;
-
-        padding-bottom: 35px;
-
-        scroll-snap-align: start;
-
-        scroll-snap-stop: normal;
-
-    }
-
-    /* Keep the background behind the content */
-    main .history-section .section-background {
-
-        position: absolute;
-
-        top: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        height: 100%;
-
-        border-radius: 18px;
-
-        opacity: 1;
-
-        transform: none;
-
-    }
-
-    main .history-section .section-overlay {
-
-        position: absolute;
-
-        inset: 0;
-
-        z-index: 1;
-
-        pointer-events: none;
-
-    }
-
-    /* Container */
-    main .history-section > .container {
-
-        position: relative;
-
-        display: block !important;
-
-        width: 100%;
-
-        height: auto !important;
-
-        min-height: 0;
-
-        padding: 0 12px;
-
-        margin: 0 auto;
-
-        z-index: 2;
-
-        opacity: 1;
-
-        transform: none;
-
-    }
-
-    main .history-wrapper {
-
-        display: block !important;
-
-        width: 100%;
-
-        height: auto !important;
-
-    }
-
-    /* Glass card */
-    main .history-box {
-
-        display: flex !important;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        width: 100%;
-
-        max-width: 100%;
-
-        height: auto !important;
-
-        min-height: 0 !important;
-
-        padding: 22px 16px;
-
-        gap: 24px;
-
-        overflow: visible !important;
-
-        opacity: 1;
-
-        visibility: visible;
-
-    }
-
-    /* Text */
-    main .history-content {
-
-        display: block !important;
-
-        width: 100%;
-
-        height: auto !important;
-
-        min-width: 0;
-
-        overflow: visible !important;
-
-        opacity: 1;
-
-        visibility: visible;
-
-    }
-
-    main .history-content h2 {
-
-        font-size: 1.7rem;
-
-        line-height: 1.35;
-
-        margin-bottom: 16px;
-
-    }
-
-    main .history-content p {
-
-        font-size: 0.88rem;
-
-        line-height: 1.75;
-
-        margin-bottom: 14px;
-
-        overflow-wrap: anywhere;
-
-    }
-
-    main .history-content .text-justify {
-
-        text-align: left;
-
-    }
-
-    /* Tribute */
-    main .history-tribute {
-
-        display: block !important;
-
-        height: auto !important;
-
-        margin-top: 18px;
-
-        overflow: visible !important;
-
-    }
-
-    /* Founder photograph */
-    main .history-image {
-
-        display: flex !important;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: flex-start;
-
-        width: 100%;
-
-        height: auto !important;
-
-        min-height: 0;
-
-        overflow: visible !important;
-
-    }
-
-    main .history-image img {
-
-        display: block !important;
-
-        width: 100%;
-
-        max-width: 280px;
-
-        height: auto !important;
-
-        max-height: none !important;
-
-        object-fit: contain;
-
-        margin: 0 auto;
-
-    }
-
-    /* Caption */
-    main .history-caption {
-
-        display: block !important;
-
-        width: 100%;
-
-        max-width: 280px;
-
-        margin-top: 12px;
-
-        text-align: center;
-
-        white-space: normal;
-
-        line-height: 1.6;
-
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media screen and (max-width: 420px) {
-
-    main .history-section > .container {
-
-        padding-left: 10px;
-
-        padding-right: 10px;
-
-    }
-
-    main .history-box {
-
-        padding: 18px 13px;
-
-        gap: 20px;
-
-    }
-
-    main .history-content h2 {
-
-        font-size: 1.5rem;
-
-    }
-
-    main .history-content p {
-
-        font-size: 0.86rem;
-
-        line-height: 1.7;
-
-    }
-
-    main .history-image img {
-
-        max-width: 100%;
-
-    }
-
-}
-
-
-/* MOBILE FIX: Show all History content */
-@media screen and (max-width: 700px) {
-
-
-.history-section {
+    width: 100%;
     height: auto !important;
     min-height: 100vh;
-    display: block !important;
-    overflow: visible !important;
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding: 100px 0 35px !important;
+    overflow: visible;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
     box-sizing: border-box;
 }
 
-.history-section > .container {
-    position: relative;
+/* Background fills only the History section */
+.history-section .section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 15px;
+    height: 100%;
+    border-radius: 18px;
+    background-size: 100% 100%;
+    opacity: 1;
+    transform: none;
+    pointer-events: none;
+}
+
+.history-section .section-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* Reset desktop container positioning */
+.history-section > .container {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 12px !important;
     opacity: 1 !important;
     transform: none !important;
     box-sizing: border-box;
@@ -1461,69 +1158,120 @@ main {
     height: auto;
 }
 
+/* Stack text and image vertically */
 .history-section .history-box {
     display: flex !important;
     flex-direction: column;
     align-items: stretch;
-    justify-content: flex-start;
+    gap: 24px;
     width: 100%;
     max-width: 100%;
     height: auto !important;
     min-height: 0 !important;
-    gap: 24px;
+    max-height: none !important;
+    margin: 0 auto;
     padding: 22px 18px;
     overflow: visible !important;
     box-sizing: border-box;
 }
 
 .history-section .history-content {
+    display: block;
     width: 100%;
-    min-width: 0;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .history-section .history-content h2 {
-    font-size: 1.8rem;
-    line-height: 1.3;
+    font-size: 1.7rem;
+    line-height: 1.35;
+    margin-bottom: 16px;
 }
 
 .history-section .history-content p {
     font-size: 0.9rem;
     line-height: 1.75;
+    margin-bottom: 14px;
+    text-align: left;
+    white-space: normal;
     overflow-wrap: anywhere;
 }
 
+.history-section .history-tribute {
+    height: auto;
+    max-height: none;
+    margin-top: 18px;
+    overflow: visible;
+}
+
+/* Founder image appears below the text */
 .history-section .history-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     height: auto;
+    max-height: none;
+    overflow: visible;
 }
 
 .history-section .history-image img {
+    display: block;
     width: 100%;
-    max-width: 300px;
-    max-height: none;
+    max-width: 280px;
     height: auto;
+    max-height: none;
     object-fit: contain;
+    margin: 0 auto;
 }
 
 .history-section .history-caption {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    margin: 12px auto 0;
+    font-size: 0.95rem;
+    white-space: normal;
 }
-
-.history-section .history-tribute {
-    margin-bottom: 5px;
-}
-
-.history-section .section-background {
-    position: absolute;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 0;
-}
-
+```
 
 }
+
+/* =========================================================
+HISTORY: VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 420px) {
+
+```
+.history-section > .container {
+    padding: 0 10px !important;
+}
+
+.history-section .history-box {
+    padding: 18px 13px;
+    gap: 20px;
+}
+
+.history-section .history-content h2 {
+    font-size: 1.5rem;
+}
+
+.history-section .history-content p {
+    font-size: 0.86rem;
+    line-height: 1.7;
+}
+
+.history-section .history-image img {
+    max-width: 100%;
+}
+
+
+}
+
 
 
 
