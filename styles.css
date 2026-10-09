@@ -1080,12 +1080,13 @@ main {
 ========================================================= */
 
 /* =========================================================
-   HISTORY SECTION - MOBILE VISIBILITY FIX
+   HISTORY & LEGACY - MOBILE FIX
 ========================================================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
 
-    .page-section.history-section {
+    /* Let the History section grow with its content */
+    main .page-section.history-section {
 
         display: block !important;
 
@@ -1101,19 +1102,26 @@ main {
 
         padding-bottom: 35px;
 
-        box-sizing: border-box;
+        scroll-snap-align: start;
+
+        scroll-snap-stop: normal;
 
     }
 
-    .history-section .section-background {
+    /* Keep the background behind the content */
+    main .history-section .section-background {
 
         position: absolute;
 
-        inset: 0;
+        top: 0;
+
+        left: 0;
 
         width: 100%;
 
         height: 100%;
+
+        border-radius: 18px;
 
         opacity: 1;
 
@@ -1121,23 +1129,24 @@ main {
 
     }
 
-    .history-section .section-overlay {
+    main .history-section .section-overlay {
 
         position: absolute;
 
         inset: 0;
 
+        z-index: 1;
+
         pointer-events: none;
 
     }
 
-    .history-section > .container {
-
-        display: block !important;
+    /* Container */
+    main .history-section > .container {
 
         position: relative;
 
-        z-index: 5;
+        display: block !important;
 
         width: 100%;
 
@@ -1147,11 +1156,17 @@ main {
 
         padding: 0 12px;
 
-        box-sizing: border-box;
+        margin: 0 auto;
+
+        z-index: 2;
+
+        opacity: 1;
+
+        transform: none;
 
     }
 
-    .history-wrapper {
+    main .history-wrapper {
 
         display: block !important;
 
@@ -1161,7 +1176,8 @@ main {
 
     }
 
-    .history-box {
+    /* Glass card */
+    main .history-box {
 
         display: flex !important;
 
@@ -1179,17 +1195,18 @@ main {
 
         padding: 22px 16px;
 
-        gap: 22px;
+        gap: 24px;
 
-        box-sizing: border-box;
-
-        visibility: visible;
+        overflow: visible !important;
 
         opacity: 1;
 
+        visibility: visible;
+
     }
 
-    .history-content {
+    /* Text */
+    main .history-content {
 
         display: block !important;
 
@@ -1201,25 +1218,23 @@ main {
 
         overflow: visible !important;
 
-        visibility: visible;
-
         opacity: 1;
+
+        visibility: visible;
 
     }
 
-    .history-content h2 {
+    main .history-content h2 {
 
         font-size: 1.7rem;
 
         line-height: 1.35;
 
-        margin-top: 0;
-
         margin-bottom: 16px;
 
     }
 
-    .history-content p {
+    main .history-content p {
 
         font-size: 0.88rem;
 
@@ -1231,25 +1246,27 @@ main {
 
     }
 
-    .history-content .text-justify {
+    main .history-content .text-justify {
 
         text-align: left;
 
     }
 
-    .history-tribute {
+    /* Tribute */
+    main .history-tribute {
 
         display: block !important;
 
         height: auto !important;
 
-        overflow: visible !important;
-
         margin-top: 18px;
+
+        overflow: visible !important;
 
     }
 
-    .history-image {
+    /* Founder photograph */
+    main .history-image {
 
         display: flex !important;
 
@@ -1269,7 +1286,7 @@ main {
 
     }
 
-    .history-image img {
+    main .history-image img {
 
         display: block !important;
 
@@ -1283,13 +1300,12 @@ main {
 
         object-fit: contain;
 
-        visibility: visible;
-
-        opacity: 1;
+        margin: 0 auto;
 
     }
 
-    .history-caption {
+    /* Caption */
+    main .history-caption {
 
         display: block !important;
 
@@ -1297,53 +1313,26 @@ main {
 
         max-width: 280px;
 
-        white-space: normal;
+        margin-top: 12px;
 
         text-align: center;
 
-    }
+        white-space: normal;
 
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media screen and (max-width: 400px) {
-
-    .history-box {
-
-        padding: 18px 13px;
-
-    }
-
-    .history-content h2 {
-
-        font-size: 1.5rem;
+        line-height: 1.6;
 
     }
 
 }
 
 
-
 /* =========================================================
-   SMALL MOBILE SCREENS
+   VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 400px) {
+@media screen and (max-width: 420px) {
 
-    .page-section.history-section {
-
-        padding-top: 85px;
-
-        padding-bottom: 30px;
-
-    }
-
-
-    .history-section > .container {
+    main .history-section > .container {
 
         padding-left: 10px;
 
@@ -1351,24 +1340,21 @@ main {
 
     }
 
+    main .history-box {
 
-    .history-box {
-
-        padding: 18px 14px;
+        padding: 18px 13px;
 
         gap: 20px;
 
     }
 
+    main .history-content h2 {
 
-    .history-content h2 {
-
-        font-size: 1.55rem;
+        font-size: 1.5rem;
 
     }
 
-
-    .history-content p {
+    main .history-content p {
 
         font-size: 0.86rem;
 
@@ -1376,14 +1362,14 @@ main {
 
     }
 
-
-    .history-image img {
+    main .history-image img {
 
         max-width: 100%;
 
     }
 
 }
+
 
 
 
