@@ -137,6 +137,64 @@ main {
 
 
 /* =========================================================
+   HISTORY SECTION SPECIFIC CENTERING
+========================================================= */
+
+/* =========================================================
+   FIX HISTORY SECTION CENTERING (OVERRIDE ALL)
+========================================================= */
+
+/* 1. เคลียร์ Padding ของ Section เพื่อให้พื้นที่คำนวณจากขอบจอจริง */
+.page-section.history-section {
+    padding-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 2. บังคับ Container ให้อยู่ตำแหน่งเดียวกับ .section-background (top: 4%, left: 5%, height: 88%) */
+.history-section > .container {
+    position: absolute !important;
+    top: 7% !important;
+    left: 5% !important;
+    width: 90% !important;
+    height: 88% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* จัด Element ด้านในให้อยู่กึ่งกลางทั้งแนวตั้งและแนวนอน */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 3. ปรับ Animation ให้เลื่อนจากตรงกลางพอดี ไม่เยื้องลงล่าง */
+.history-section > .container {
+    transform: none !important;
+}
+
+/* 4. ให้ Wrapper ขยายเต็มพื้นที่ Container */
+.history-section .history-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+/* 5. ปรับขนาดกล่อง history-box ให้เว้นระยะจากขอบรูปภาพเท่าๆ กัน */
+.history-section .history-box {
+    margin: auto !important;
+    max-height: calc(100% - 40px) !important; /* เว้นขอบบน-ล่าง อย่างละ 20px */
+    height: auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important; /* รองรับ Scroll หากเนื้อหายาวเกินไป */
+}
+
+
+/* =========================================================
    BACKGROUND CONTAINER
 ========================================================= */
 
