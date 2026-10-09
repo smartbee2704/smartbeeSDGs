@@ -1095,7 +1095,8 @@ HISTORY: MOBILE RESPONSIVE
 ```
 /* Let the main scroller move through the full section */
 main {
-    scroll-snap-type: none !important;
+    scroll-snap-type: y mandatory !important;
+    scroll-behavior: smooth;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -1110,8 +1111,8 @@ main {
     min-height: 100vh;
     padding: 100px 0 35px !important;
     overflow: visible;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     box-sizing: border-box;
 }
 
