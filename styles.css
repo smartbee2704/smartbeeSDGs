@@ -841,6 +841,263 @@ main {
 
 
 /* =========================================================
+   HISTORY & LEGACY BACKGROUND
+========================================================= */
+
+.history-section .section-background {
+
+    background-image: url("BG3.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+/* =========================================================
+   HISTORY CONTENT BOX
+========================================================= */
+
+.history-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.history-box {
+
+    width: 100%;
+    max-width: 1100px;
+    min-height: 570px;
+
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 2.5rem;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   HISTORY TEXT
+========================================================= */
+
+.history-content h2 {
+
+    margin-bottom: 1rem;
+
+    color: var(--purple);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+
+    line-height: 1.2;
+
+}
+
+.history-content p {
+
+    margin-bottom: 0.85rem;
+
+    color: #453e49;
+
+    font-size: 0.87rem;
+
+    line-height: 1.7;
+
+}
+
+.history-content .text-justify {
+
+    text-align: justify;
+
+}
+
+
+/* =========================================================
+   FOUNDER IMAGE
+========================================================= */
+
+.history-image {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+}
+
+.history-image img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    max-height: 440px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+}
+
+
+/* Image caption */
+
+.history-caption {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    color: var(--purple);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+.history-caption span {
+
+    display: block;
+
+    margin-top: 0.2rem;
+
+    color: #746b79;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   FOUNDER TRIBUTE
+========================================================= */
+
+.history-tribute {
+
+    margin-top: 1.2rem;
+
+    padding: 0.8rem 1rem;
+
+    border-left: 3px solid var(--gold);
+
+    background: rgba(102, 82, 122, 0.06);
+
+}
+
+.history-tribute .tribute-title {
+
+    margin-bottom: 0.25rem;
+
+    color: var(--purple);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+}
+
+.history-tribute .tribute-text {
+
+    margin-bottom: 0;
+
+    color: #65546e;
+
+    font-size: 0.85rem;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .history-box {
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+        min-height: auto;
+
+        padding: 1.5rem;
+
+    }
+
+    .history-content h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .history-content p {
+
+        font-size: 0.85rem;
+
+        line-height: 1.7;
+
+    }
+
+    .history-image img {
+
+        width: 85%;
+
+        max-height: 350px;
+
+    }
+
+    .history-caption {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+
+/* =========================================================
    RESEARCH
 ========================================================= */
 
