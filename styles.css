@@ -1428,6 +1428,47 @@ main {
 
 }
 
+/* FIX: Keep the History background inside its own section */
+@media screen and (max-width: 700px) {
+
+
+.history-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden !important;
+}
+
+.history-section .section-background {
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 18px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.history-section .section-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.history-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.history-section + .page-section {
+    position: relative;
+    z-index: 1;
+}
+
+
+}
+
 
 
 
