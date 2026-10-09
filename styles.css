@@ -923,62 +923,79 @@ main {
    HISTORY MAIN CONTAINER
 ========================================================= */
 
-.history-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.history-box {
-    width: 100%;
-    max-width: 1100px;
-    min-height: 570px;
-    padding: 2rem;
-    box-sizing: border-box;
-
-    display: grid;
-
-    grid-template-columns: 1.2fr 0.8fr;
-
-    grid-template-areas:
-        "logos logos"
-        "content image";
-
-    column-gap: 2.5rem;
-    row-gap: 1rem;
-
-    align-items: start;
-}
-
-
-```css
 /* =========================================================
-   HISTORY LAYOUT
-   Text on left, logos above founder image on right
+   HISTORY LOGOS AND YEARS
+   Logos appear above "Our History & Legacy"
 ========================================================= */
 
-.history-box {
-    display: grid !important;
+.history-logos {
+    grid-area: logos;
 
-    grid-template-columns: 1.15fr 0.85fr;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
 
-    grid-template-areas:
-        "content logos"
-        "content image";
-
-    column-gap: 2.5rem;
-    row-gap: 1rem;
-
-    align-items: start;
+    gap: 22px;
 
     width: 100%;
-    max-width: 1100px;
-    min-height: 570px;
-
-    padding: 2rem;
+    margin: 0 0 0.5rem;
     box-sizing: border-box;
 }
+
+.history-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.history-logo-item img {
+    display: block;
+
+    width: 100%;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+/* Year below each logo */
+
+.history-logo-year {
+    display: block;
+
+    margin: 0;
+
+    color: var(--purple);
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+/* Divider between the first and second logos */
+
+.history-logos .logo-divider {
+    display: block;
+
+    width: 1px;
+    height: 65px;
+
+    margin-top: 8px;
+
+    background: rgba(102, 82, 122, 0.35);
+
+    flex-shrink: 0;
+}
+
 
 /* =========================================================
    HISTORY CONTENT
@@ -991,9 +1008,12 @@ main {
 
 .history-content .section-kicker {
     display: block;
+
     text-align: left;
+
     margin-bottom: 12px;
-    color: var(--gold);
+
+    color: var(--purple);
 }
 
 .history-content h2 {
@@ -1019,90 +1039,12 @@ main {
     text-align: justify;
 }
 
-/* =========================================================
-   HISTORY LOGOS AND YEARS
-   Right column, above the founder photo
-========================================================= */
-
-.history-box > .history-logos {
-    grid-area: logos;
-
-    display: flex !important;
-    flex-direction: row;
-
-    justify-content: center !important;
-    align-items: flex-start !important;
-
-    gap: 12px;
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    box-sizing: border-box;
-}
-
-.history-box > .history-logos > .history-logo-item {
-    display: flex !important;
-    flex-direction: column !important;
-
-    align-items: center !important;
-    justify-content: flex-start;
-
-    gap: 6px;
-
-    width: 90px;
-    flex: 1 1 0;
-    min-width: 0;
-}
-
-.history-box > .history-logos > .history-logo-item img {
-    display: block;
-
-    width: 100%;
-    height: 60px;
-
-    object-fit: contain;
-}
-
-/* Year below each logo */
-
-.history-box .history-logo-year {
-    display: block !important;
-
-    width: 100%;
-    margin: 0;
-
-    color: var(--purple);
-
-    font-family: "Inter", sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.4;
-
-    text-align: center;
-}
-
-/* Divider between the first and second logos */
-
-.history-box > .history-logos > .logo-divider {
-    display: block;
-
-    width: 1px;
-    height: 55px;
-
-    margin-top: 8px;
-
-    background: rgba(102, 82, 122, 0.3);
-
-    flex-shrink: 0;
-}
 
 /* =========================================================
    FOUNDER IMAGE
 ========================================================= */
 
-.history-box > .history-image {
+.history-image {
     grid-area: image;
 
     display: flex;
@@ -1115,23 +1057,23 @@ main {
     min-width: 0;
 }
 
-.history-box > .history-image img {
+.history-image img {
     display: block;
 
     width: 100%;
     max-width: 350px;
-    max-height: 380px;
+    max-height: 440px;
 
     object-fit: contain;
 
     border-radius: 12px;
 }
 
-.history-box > .history-image .history-caption {
+.history-caption {
     width: 100%;
     max-width: 350px;
 
-    margin-top: 0.8rem;
+    margin-top: 1rem;
 
     text-align: center;
 
@@ -1143,7 +1085,7 @@ main {
     line-height: 1.5;
 }
 
-.history-box > .history-image .history-caption span {
+.history-caption span {
     display: block;
 
     margin-top: 0.2rem;
@@ -1154,6 +1096,7 @@ main {
     font-size: 0.78rem;
     font-weight: 400;
 }
+
 
 /* =========================================================
    FOUNDER TRIBUTE
@@ -1189,19 +1132,20 @@ main {
     line-height: 1.6;
 }
 
+
 /* =========================================================
-   TABLET AND MOBILE
+   TABLET AND MOBILE RESPONSIVE
 ========================================================= */
 
 @media (max-width: 768px) {
 
     .history-box {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
 
         grid-template-areas:
             "logos"
-            "image"
-            "content";
+            "content"
+            "image";
 
         gap: 1.5rem;
 
@@ -1209,42 +1153,34 @@ main {
         padding: 1.5rem;
     }
 
-    /* Logos at the top */
+    /* Keep logos at the very top */
 
-    .history-box > .history-logos {
-        justify-content: center !important;
-        align-items: flex-start !important;
+    .history-logos {
+        justify-content: center;
+        align-items: flex-start;
+
         gap: 12px;
+
+        margin-bottom: 0.25rem;
     }
 
-    .history-box > .history-logos > .history-logo-item {
+    .history-logo-item {
         width: 80px;
-        max-width: 90px;
-        flex: 1 1 0;
+        flex-shrink: 1;
     }
 
-    .history-box > .history-logos > .history-logo-item img {
-        height: 65px;
+    .history-logo-item img {
+        width: 100%;
+        height: 70px;
     }
 
-    .history-box .history-logo-year {
-        font-size: 0.75rem;
+    .history-logo-year {
+        font-size: 0.8rem;
     }
 
-    .history-box > .history-logos > .logo-divider {
-        height: 45px;
+    .history-logos .logo-divider {
+        height: 50px;
         margin-top: 5px;
-    }
-
-    /* Founder photo */
-
-    .history-box > .history-image img {
-        width: 85%;
-        max-height: 320px;
-    }
-
-    .history-box > .history-image .history-caption {
-        font-size: 0.95rem;
     }
 
     /* History text */
@@ -1257,7 +1193,19 @@ main {
         font-size: 0.85rem;
         line-height: 1.7;
     }
+
+    /* Founder image */
+
+    .history-image img {
+        width: 85%;
+        max-height: 350px;
+    }
+
+    .history-caption {
+        font-size: 0.95rem;
+    }
 }
+
 
 /* =========================================================
    SMALL MOBILE SCREENS
@@ -1269,28 +1217,26 @@ main {
         padding: 1rem;
     }
 
-    .history-box > .history-logos {
+    .history-logos {
         gap: 8px;
     }
 
-    .history-box > .history-logos > .history-logo-item {
+    .history-logo-item {
         width: 70px;
     }
 
-    .history-box > .history-logos > .history-logo-item img {
-        height: 55px;
+    .history-logo-item img {
+        height: 60px;
     }
 
-    .history-box .history-logo-year {
-        font-size: 0.7rem;
+    .history-logo-year {
+        font-size: 0.75rem;
     }
 
-    .history-box > .history-logos > .logo-divider {
-        height: 40px;
+    .history-logos .logo-divider {
+        height: 45px;
     }
 }
-```
-
 
 
 
