@@ -1263,7 +1263,7 @@ main {
     }
 
     .history-content .section-kicker {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
 
     .history-content h2 {
@@ -2976,6 +2976,12 @@ main {
 
         gap: 4px;
 
+    }
+
+ 
+   .styled-list li {
+    
+        font-size: 14px;
     }
 
 
