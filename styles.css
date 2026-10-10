@@ -962,7 +962,7 @@ main {
 ========================================================= */
 
 .history-section .section-background {
-    background-image: url("BGAJ.png");
+    background-image: url("BGABOUT.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -970,7 +970,9 @@ main {
 
 
 /* =========================================================
-   HISTORY MAIN CONTAINER
+   MAIN HISTORY LAYOUT
+   Left: Text
+   Right: Logos + Founder Image
 ========================================================= */
 
 .history-wrapper {
@@ -982,101 +984,23 @@ main {
 
 .history-box {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1180px;
     min-height: 570px;
-    padding: 2rem;
+    padding: 2.5rem;
     box-sizing: border-box;
 
     display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
 
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas: "content right";
 
-    grid-template-areas:
-        "logos logos"
-        "content image";
-
-    column-gap: 2.5rem;
-    row-gap: 1rem;
-
+    column-gap: 3rem;
     align-items: start;
 }
 
 
 /* =========================================================
-   HISTORY LOGOS AND YEARS
-   Logos appear above "Our History & Legacy"
-========================================================= */
-
-.history-logos {
-    grid-area: logos;
-
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-
-    gap: 22px;
-
-    width: 100%;
-    margin: 0 0 0.5rem;
-    box-sizing: border-box;
-}
-
-.history-logo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: flex-start;
-
-    gap: 8px;
-
-    width: 110px;
-    flex-shrink: 0;
-}
-
-.history-logo-item img {
-    display: block;
-
-    width: 100%;
-    height: 60px;
-
-    object-fit: contain;
-}
-
-/* Year below each logo */
-
-.history-logo-year {
-    display: block;
-
-    margin: 0;
-
-    color: var(--purple);
-
-    font-family: "Inter", sans-serif;
-    font-size: 0.6rem;
-    font-weight: 600;
-    line-height: 1.4;
-
-    text-align: center;
-}
-
-/* Divider between the first and second logos */
-
-.history-logos .logo-divider {
-    display: block;
-
-    width: 1px;
-    height: 65px;
-
-    margin-top: 8px;
-
-    background: rgba(102, 82, 122, 0.35);
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
-   HISTORY CONTENT
+   LEFT SIDE: HISTORY TEXT
 ========================================================= */
 
 .history-content {
@@ -1086,31 +1010,24 @@ main {
 
 .history-content .section-kicker {
     display: block;
-
     text-align: left;
-
     margin-bottom: 12px;
-
-    color: var(--gold);
+    color: var(--purple);
 }
 
 .history-content h2 {
-    margin: 0 0 1rem;
-
+    margin: 0 0 1.2rem;
     color: var(--purple);
-
     font-family: "Playfair Display", serif;
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
     line-height: 1.2;
 }
 
 .history-content p {
-    margin: 0 0 0.85rem;
-
+    margin: 0 0 1rem;
     color: #453e49;
-
-    font-size: 0.87rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.75;
 }
 
 .history-content .text-justify {
@@ -1119,42 +1036,114 @@ main {
 
 
 /* =========================================================
+   RIGHT SIDE: LOGOS + FOUNDER
+========================================================= */
+
+.history-right {
+    grid-area: right;
+    min-width: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+
+    padding-top: 0.2rem;
+}
+
+
+/* =========================================================
+   LOGOS AND YEARS
+========================================================= */
+
+.history-logos {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 12px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.history-logo-item {
+    flex: 1 1 0;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.history-logo-item img {
+    display: block;
+    width: 100%;
+    height: 65px;
+    object-fit: contain;
+}
+
+.history-logo-year {
+    display: block;
+    margin: 0;
+
+    color: var(--purple);
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.history-logos .logo-divider {
+    display: block;
+    width: 1px;
+    height: 60px;
+    margin-top: 3px;
+
+    background: rgba(102, 82, 122, 0.35);
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
    FOUNDER IMAGE
 ========================================================= */
 
 .history-image {
-    grid-area: image;
+    width: 100%;
+    min-width: 0;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
-
-    width: 100%;
-    min-width: 0;
 }
 
 .history-image img {
     display: block;
 
     width: 100%;
-    max-width: 350px;
-    max-height: 440px;
+    max-width: 340px;
+    max-height: 390px;
 
     object-fit: contain;
+    object-position: center;
 
     border-radius: 12px;
 }
 
 .history-caption {
     width: 100%;
-    max-width: 350px;
+    max-width: 340px;
 
-    margin-top: 1rem;
+    margin: 0.9rem 0 0;
 
     text-align: center;
-
     color: var(--purple);
 
     font-family: "Playfair Display", serif;
@@ -1165,11 +1154,9 @@ main {
 
 .history-caption span {
     display: block;
-
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
 
     color: #746b79;
-
     font-family: "Inter", sans-serif;
     font-size: 0.78rem;
     font-weight: 400;
@@ -1181,79 +1168,142 @@ main {
 ========================================================= */
 
 .history-tribute {
-    margin-top: 1.2rem;
-
-    padding: 0.8rem 1rem;
+    margin-top: 1.3rem;
+    padding: 0.9rem 1rem;
 
     border-left: 3px solid var(--gold);
-
     background: rgba(102, 82, 122, 0.06);
 }
 
 .history-tribute .tribute-title {
-    margin-bottom: 0.25rem;
+    margin: 0 0 0.3rem;
 
     color: var(--purple);
-
     font-family: "Playfair Display", serif;
     font-size: 1.05rem;
     font-weight: 600;
 }
 
 .history-tribute .tribute-text {
-    margin-bottom: 0;
+    margin: 0;
 
     color: #65546e;
-
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   TABLET AND MOBILE RESPONSIVE
+   TABLET
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) and (min-width: 601px) {
 
     .history-box {
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "logos"
-            "content"
-            "image";
-
-        gap: 1.5rem;
-
-        min-height: auto;
-        padding: 1.5rem;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        column-gap: 1.5rem;
+        padding: 1.8rem;
     }
 
-    /* Keep logos at the very top */
+    .history-right {
+        gap: 1.4rem;
+    }
 
     .history-logos {
-        justify-content: center;
-        align-items: flex-start;
-
-        gap: 12px;
-
-        margin-bottom: 0.25rem;
-    }
-
-    .history-logo-item {
-        width: 80px;
-        flex-shrink: 1;
+        gap: 7px;
     }
 
     .history-logo-item img {
+        height: 55px;
+    }
+
+    .history-logos .logo-divider {
+        height: 50px;
+    }
+
+    .history-content p {
+        font-size: 0.84rem;
+        line-height: 1.7;
+    }
+
+    .history-image img {
+        max-height: 320px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .history-wrapper {
+        align-items: flex-start;
+    }
+
+    .history-box {
         width: 100%;
-        height: 70px;
+        min-height: auto;
+        padding: 1.3rem;
+
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "content"
+            "right";
+
+        row-gap: 2rem;
+    }
+
+    /* Keep the full history text together on top */
+
+    .history-content {
+        width: 100%;
+    }
+
+    .history-content .section-kicker {
+        font-size: 0.85rem;
+    }
+
+    .history-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .history-content p {
+        font-size: 0.87rem;
+        line-height: 1.75;
+    }
+
+    .history-tribute {
+        margin-top: 1rem;
+    }
+
+    /* Logos and photo appear below the text */
+
+    .history-right {
+        width: 100%;
+        gap: 1.5rem;
+        padding-top: 0;
+    }
+
+    .history-logos {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .history-logo-item {
+        flex: 1 1 0;
+        max-width: 105px;
+    }
+
+    .history-logo-item img {
+        height: 65px;
     }
 
     .history-logo-year {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
     }
 
     .history-logos .logo-divider {
@@ -1261,21 +1311,9 @@ main {
         margin-top: 5px;
     }
 
-    /* History text */
-
-    .history-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .history-content p {
-        font-size: 0.85rem;
-        line-height: 1.7;
-    }
-
-    /* Founder image */
-
     .history-image img {
         width: 85%;
+        max-width: 320px;
         max-height: 350px;
     }
 
@@ -1286,7 +1324,7 @@ main {
 
 
 /* =========================================================
-   SMALL MOBILE SCREENS
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 380px) {
@@ -1296,25 +1334,22 @@ main {
     }
 
     .history-logos {
-        gap: 8px;
-    }
-
-    .history-logo-item {
-        width: 70px;
+        gap: 7px;
     }
 
     .history-logo-item img {
-        height: 60px;
+        height: 55px;
     }
 
     .history-logo-year {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
     }
 
     .history-logos .logo-divider {
-        height: 45px;
+        height: 43px;
     }
 }
+```
 
 
 /* =========================================================
