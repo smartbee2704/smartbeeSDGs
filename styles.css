@@ -1272,7 +1272,7 @@ main {
     }
 
     .history-content p {
-        font-size: 0.87rem;
+        font-size: 0.75rem;
         line-height: 1.75;
     }
 
@@ -1303,7 +1303,7 @@ main {
     }
 
     .history-logo-year {
-        font-size: 0.78rem;
+        font-size: 0.65rem;
     }
 
     .history-logos .logo-divider {
