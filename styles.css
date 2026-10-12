@@ -2971,11 +2971,15 @@ main {
 
     .about-content h2 {
 
-        font-size: 1rem;
+        font-size: 1.5rem;
 
     }
 
+ .about-content h3 {
 
+        font-size: 1.5rem;
+
+    }
     .about-content p {
 
         font-size: 0.72rem;
