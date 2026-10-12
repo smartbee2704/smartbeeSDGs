@@ -1563,10 +1563,24 @@ main {
         serif;
 
     font-size:
-        clamp(1.5rem, 3vw, 2.5rem);
+        clamp(1.5rem, 3vw, 2.45rem);
 
 }
 
+.about-content h3 {
+
+    margin-bottom: 0.9rem;
+
+    color: var(--purple);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(1.5rem, 3vw, 2.3rem);
+
+}
 
 .about-content p {
 
