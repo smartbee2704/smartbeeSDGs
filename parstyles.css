@@ -823,18 +823,16 @@ body {
 
 
 .collaborator-list li {
-
     display: flex;
-
     flex-direction: column;
+    gap: 4px;
+    padding: 0 0 12px;
+    border-left: none;
+    border-bottom: 1px solid var(--gold);
+}
 
-    gap: 2px;
-
-    padding-left: 17px;
-
-    border-left:
-        3px solid var(--gold);
-
+.collaborator-list li:last-child {
+    border-bottom: none;
 }
 
 
@@ -900,7 +898,7 @@ body {
 
     font-size: 0.78rem;
 
-    font-weight: 600;
+    font-weight: 500;
 
     text-decoration: none;
 
@@ -913,7 +911,9 @@ body {
 
 .partner-link:hover {
 
-    color: var(--purple-dark);
+    color: var(--gold);
+    
+    font-size: 0.75rem;
 
     gap: 9px;
 
@@ -985,7 +985,7 @@ body {
 
 .copyright-left {
 
-    color: var(--purple);
+    color: var(--purple-dark);
 
     font-size: 0.82rem;
 
@@ -1017,7 +1017,7 @@ body {
 
 .university-location {
 
-    color: var(--purple);
+    color: var(--purple-dark);
 
     font-size: 0.82rem;
 
@@ -1512,4 +1512,858 @@ body {
 
     }
 
+}
+
+
+
+
+/* =========================================================
+   COLLABORATION PAGE
+   INTERNATIONAL / THAI UNIVERSITY BROWSER
+   ========================================================= */
+
+/* Main university tabs */
+
+#international-collaboration .collaboration-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 22px;
+}
+
+#international-collaboration .collaboration-tab {
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+#international-collaboration .collaboration-tab:hover {
+    transform: translateY(-1px);
+}
+
+/* Show only the selected main group */
+
+#international-collaboration .collaboration-main-panel {
+    display: none;
+    width: 100%;
+    min-width: 0;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+}
+
+#international-collaboration .collaboration-main-panel.active {
+    display: block;
+    animation: collaborationFade 0.35s ease;
+}
+
+/* Country / university list beside information */
+
+#international-collaboration .collaboration-browser {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Vertical sidebar */
+
+#international-collaboration .collaboration-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    min-width: 0;
+    padding-right: 18px;
+    border-right: 1px solid var(--border);
+}
+
+#international-collaboration .sidebar-heading {
+    margin: 0 0 12px;
+    padding: 0 12px;
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* Individual country / university buttons */
+
+#international-collaboration .country-tab {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--purple-dark);
+    font-family: "Inter", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+#international-collaboration .country-tab:hover {
+    background: var(--purple-light);
+    color: var(--purple-dark);
+}
+
+#international-collaboration .country-tab.active {
+    background: var(--purple);
+    color: var(--white);
+    border-color: var(--purple);
+    font-weight: 600;
+}
+
+/* Right-hand information area */
+
+#international-collaboration .collaboration-details {
+    min-width: 0;
+    width: 100%;
+}
+
+#international-collaboration .country-content {
+    display: none;
+    min-width: 0;
+}
+
+#international-collaboration .country-content.active {
+    display: block;
+    animation: collaborationFade 0.35s ease;
+}
+
+#international-collaboration .country-content h3 {
+    margin: 0 0 8px;
+    color: var(--purple-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+#international-collaboration .country-content h4 {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#international-collaboration .country-content p,
+#international-collaboration .country-content li,
+#international-collaboration .country-content span,
+#international-collaboration .country-content strong {
+    overflow-wrap: anywhere;
+}
+
+/* Keep the content animation safe if another section defines it */
+
+@keyframes collaborationFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    #international-collaboration .collaboration-main-panel {
+        padding: 26px;
+    }
+
+    #international-collaboration .collaboration-browser {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    #international-collaboration .collaboration-sidebar {
+        padding-right: 14px;
+    }
+}
+
+/* Mobile: list above the information */
+
+@media (max-width: 600px) {
+    #international-collaboration .collaboration-tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    #international-collaboration .collaboration-tab {
+        width: 100%;
+    }
+
+    #international-collaboration .collaboration-main-panel {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    #international-collaboration .collaboration-browser {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    #international-collaboration .collaboration-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 0 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    #international-collaboration .sidebar-heading {
+        margin-bottom: 8px;
+    }
+
+    #international-collaboration .country-tab {
+        padding: 11px 12px;
+        font-size: 0.84rem;
+    }
+
+    #international-collaboration .collaboration-details {
+        width: 100%;
+    }
+
+    #international-collaboration .country-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small mobile screens */
+
+@media (max-width: 380px) {
+    #international-collaboration .collaboration-main-panel {
+        padding: 16px 12px;
+    }
+
+    #international-collaboration .country-content h3 {
+        font-size: 1.55rem;
+    }
+
+    #international-collaboration .country-tab {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* =========================================================
+   COLLABORATOR INFORMATION AND WEBSITE LINKS
+========================================================= */
+
+#international-collaboration .collaborator-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 20px;
+}
+
+#international-collaboration .collaborator-list li {
+    padding-left: 3px;
+    line-height: 1.65;
+}
+
+#international-collaboration .collaborator-list li strong,
+#international-collaboration .collaborator-list li span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+#international-collaboration .collaborator-list li strong {
+    color: var(--purple-dark);
+    font-weight: 600;
+}
+
+#international-collaboration .collaborator-list li span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+#international-collaboration .collaborator-list li a {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--purple);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+#international-collaboration .collaborator-list li a:hover {
+    color: var(--gold);
+    
+}
+
+
+```css
+/* =========================================================
+   BUSINESS & COMMUNITY COLLABORATIONS
+   MATCHING THE EXISTING WEBSITE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+#community-collaboration {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto 100px;
+}
+
+
+/* =========================================================
+   MAIN TABS: COMPANY / FARM
+========================================================= */
+
+#community-collaboration .collaboration-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 22px;
+}
+
+#community-collaboration .collaboration-tab {
+    appearance: none;
+    padding: 10px 18px;
+    border: 1px solid rgba(102, 82, 122, 0.20);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.70);
+    color: var(--purple-dark);
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.3;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+#community-collaboration .collaboration-tab:hover {
+    background: var(--purple-light);
+    border-color: var(--purple);
+    transform: translateY(-1px);
+}
+
+#community-collaboration .collaboration-tab.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: var(--white);
+    box-shadow: 0 7px 18px rgba(73, 56, 93, 0.16);
+}
+
+
+/* =========================================================
+   MAIN PANELS
+========================================================= */
+
+#community-collaboration .main-content {
+    display: none;
+    width: 100%;
+    min-width: 0;
+}
+
+#community-collaboration .main-content.active {
+    display: block;
+    animation: collaborationFade 0.35s ease;
+}
+
+#community-collaboration .main-content[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   COMPANY PANEL
+========================================================= */
+
+#community-collaboration .collaboration-main-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 34px;
+
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COUNTRY BROWSER
+========================================================= */
+
+#community-collaboration .collaboration-browser {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+    gap: 30px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   VERTICAL COUNTRY SIDEBAR
+========================================================= */
+
+#community-collaboration .collaboration-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+
+    min-width: 0;
+    padding-right: 18px;
+
+    border-right: 1px solid var(--border);
+}
+
+#community-collaboration .sidebar-heading {
+    margin: 0 0 12px;
+    padding: 0 12px;
+
+    color: var(--gold);
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COUNTRY BUTTONS
+========================================================= */
+
+#community-collaboration .country-tab {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background: transparent;
+    color: var(--purple-dark);
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+#community-collaboration .country-tab:hover {
+    background: var(--purple-light);
+    color: var(--purple-dark);
+}
+
+#community-collaboration .country-tab.active {
+    background: var(--purple);
+    color: var(--white);
+    border-color: var(--purple);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   COUNTRY INFORMATION
+========================================================= */
+
+#community-collaboration .collaboration-details {
+    width: 100%;
+    min-width: 0;
+}
+
+#community-collaboration .country-content {
+    display: none;
+    min-width: 0;
+}
+
+#community-collaboration .country-content.active {
+    display: block;
+    animation: collaborationFade 0.35s ease;
+}
+
+
+/* =========================================================
+   PANEL TEXT
+========================================================= */
+
+#community-collaboration .panel-label {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--gold);
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+#community-collaboration .country-content h3,
+#community-collaboration .farm-content h3 {
+    margin: 0 0 8px;
+
+    color: var(--purple-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+}
+
+#community-collaboration .panel-location {
+    margin: 0 0 17px;
+
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+#community-collaboration .panel-description {
+    max-width: 850px;
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+#community-collaboration .panel-divider {
+    width: 100%;
+    height: 1px;
+    margin: 27px 0;
+
+    background: rgba(73, 56, 93, 0.10);
+}
+
+
+/* =========================================================
+   COLLABORATOR INFORMATION
+========================================================= */
+
+#community-collaboration .collaborator-block {
+    margin-bottom: 24px;
+}
+
+#community-collaboration .collaborator-block h4 {
+    margin: 0 0 11px;
+
+    color: var(--purple-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#community-collaboration .collaborator-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin: 0;
+    padding-left: 20px;
+
+    list-style: disc;
+}
+
+#community-collaboration .collaborator-list li {
+    padding-left: 3px;
+    line-height: 1.65;
+}
+
+#community-collaboration .collaborator-list li strong,
+#community-collaboration .collaborator-list li span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+#community-collaboration .collaborator-list li strong {
+    color: var(--purple-dark);
+    font-size: 0.90rem;
+    font-weight: 600;
+}
+
+#community-collaboration .collaborator-list li span {
+    color: var(--text-light);
+    font-size: 0.82rem;
+}
+
+#community-collaboration .collaborator-list li a {
+    display: inline-block;
+    margin-top: 4px;
+
+    color: var(--purple);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+#community-collaboration .collaborator-list li a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   FARM PANEL
+========================================================= */
+
+#community-collaboration .farm-content {
+    width: 100%;
+    min-width: 0;
+}
+
+#community-collaboration .farm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+#community-collaboration .farm-card {
+    min-width: 0;
+    padding: 22px;
+
+}
+
+#community-collaboration .farm-card:hover {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(214, 164, 66, 0.65);
+    transform: translateY(-2px);
+}
+
+#community-collaboration .farm-card-number {
+    margin-bottom: 14px;
+
+    color: var(--gold);
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+}
+
+#community-collaboration .farm-card h4 {
+    margin: 0 0 10px;
+
+    color: var(--purple-dark);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#community-collaboration .farm-card p {
+    margin: 0 0 16px;
+
+    color: var(--text-light);
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+#community-collaboration .farm-tag {
+    display: inline-block;
+    padding: 4px 10px;
+
+    background: var(--purple-light);
+    border-radius: 20px;
+
+    color: var(--purple);
+    font-size: 0.70rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes collaborationFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #community-collaboration .collaboration-main-panel {
+        padding: 26px;
+    }
+
+    #community-collaboration .collaboration-browser {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    #community-collaboration .collaboration-sidebar {
+        padding-right: 14px;
+    }
+
+    #community-collaboration .farm-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #community-collaboration {
+        width: calc(100% - 24px);
+        margin-bottom: 75px;
+    }
+
+    #community-collaboration .collaboration-tabs {
+        gap: 8px;
+    }
+
+    #community-collaboration .collaboration-tab {
+        padding: 9px 15px;
+        font-size: 0.78rem;
+    }
+
+    #community-collaboration .collaboration-main-panel {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    #community-collaboration .collaboration-browser {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    #community-collaboration .collaboration-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        padding: 0 0 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    #community-collaboration .sidebar-heading {
+        margin-bottom: 8px;
+    }
+
+    #community-collaboration .country-tab {
+        padding: 11px 12px;
+        font-size: 0.84rem;
+    }
+
+    #community-collaboration .collaboration-details {
+        width: 100%;
+    }
+
+    #community-collaboration .country-content h3,
+    #community-collaboration .farm-content h3 {
+        font-size: 1.8rem;
+    }
+
+    #community-collaboration .panel-description {
+        font-size: 0.88rem;
+    }
+
+    #community-collaboration .farm-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    #community-collaboration .farm-card {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    #community-collaboration .collaboration-main-panel {
+        padding: 16px 12px;
+    }
+
+    #community-collaboration .country-content h3,
+    #community-collaboration .farm-content h3 {
+        font-size: 1.55rem;
+    }
+
+    #community-collaboration .country-tab {
+        font-size: 0.8rem;
+    }
+}
+```
+
+
+/* =========================================
+   COMPANY / FARM PANEL VISIBILITY
+========================================= */
+
+#community-collaboration .main-content[hidden] {
+    display: none !important;
+}
+
+#community-collaboration .main-content.active:not([hidden]) {
+    display: block;
 }
