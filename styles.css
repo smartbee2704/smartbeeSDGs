@@ -3005,9 +3005,9 @@ main {
 
     .about-image img {
 
-        max-width: 290px !important;
+        max-width: 200px !important;
 
-        max-height: 340px !important;
+        max-height: 250px !important;
 
     }
 
