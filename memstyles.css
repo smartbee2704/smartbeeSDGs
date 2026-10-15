@@ -1012,6 +1012,23 @@ a {
 
 }
 
+.timeline-content p a {
+    
+    margin: 0 0 6px 0;
+
+    color: var(--text-light);
+
+    font-size: 0.75rem;
+
+    text-decoration: none;
+   
+    transition: color 0.3s ease;
+}
+
+.timeline-content p a:hover {
+    color: var(--green);
+}
+
 .timeline-link {
 
     color: var(--text-light);
