@@ -1898,6 +1898,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    
+/* =========================================
+   COMPANY & FARM COUNTRY TABS
+========================================= */
+
+document.querySelectorAll(
+    "#company-panel, #farm-panel"
+).forEach(function (panel) {
+
+    const countryTabs =
+        panel.querySelectorAll(".country-tab");
+
+    const countryPanels =
+        panel.querySelectorAll(".country-content");
+
+    countryTabs.forEach(function (tab) {
+
+        tab.addEventListener("click", function () {
+
+            const targetId =
+                tab.getAttribute("data-country");
+
+            countryTabs.forEach(function (button) {
+
+                const selected = button === tab;
+
+                button.classList.toggle("active", selected);
+
+                button.setAttribute(
+                    "aria-selected",
+                    selected ? "true" : "false"
+                );
+            });
+
+            countryPanels.forEach(function (content) {
+
+                content.classList.toggle(
+                    "active",
+                    content.id === targetId
+                );
+
+            });
+
+        });
+
+    });
+
+});
+
+
+
     /* =========================================
        FOOTER YEAR
     ========================================= */
