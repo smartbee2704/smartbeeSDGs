@@ -855,6 +855,18 @@ body {
 
 }
 
+/* Research area */
+.collaborator-list span.member-research {
+    display: block;
+    margin-top: 3px;
+    color: grey !important;
+    font-size: 0.80rem !important;
+    font-style: normal !important;
+    line-height: 1.6;
+}
+
+
+
 
 /* =========================================================
    EVIDENCE
@@ -2216,6 +2228,245 @@ body {
     color: var(--purple);
     font-size: 0.70rem;
     font-weight: 600;
+}
+
+
+
+
+/* =========================================
+   OTHER THAI INSTITUTIONS
+   LOGO: LEFT
+   INFORMATION: RIGHT
+========================================= */
+
+#thai-other .collaborator-list li.collaborator-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+
+    padding: 20px 0;
+    border-left: none;
+    border-bottom: 1px solid var(--gold);
+
+    list-style: none;
+}
+
+#thai-other .collaborator-item .collaborator-logo {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#thai-other .collaborator-item .collaborator-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#thai-other .collaborator-item .collaborator-info {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+#thai-other .collaborator-item .collaborator-info strong {
+    display: block;
+    margin: 0;
+
+    color: var(--purple-dark);
+    font-size: 0.90rem;
+    font-weight: 700;
+}
+
+#thai-other .collaborator-item .collaborator-info span {
+    display: block;
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+#thai-other .collaborator-item .collaborator-info a {
+    display: inline-block;
+    margin-top: 2px;
+
+    color: var(--purple);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+#thai-other .collaborator-item .collaborator-info a:hover {
+    color: var(--gold);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #thai-other .collaborator-list li.collaborator-item {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    #thai-other .collaborator-item .collaborator-logo {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+
+/* =========================================
+   COMPANY LOGO: LEFT
+   INFORMATION: RIGHT
+========================================= */
+
+#community-collaboration .collaborator-list li.collaborator-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+
+    padding: 20px 0;
+    border-left: none;
+    border-bottom: 1px solid var(--gold);
+
+    list-style: none;
+}
+
+#community-collaboration .collaborator-item .collaborator-logo {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#community-collaboration .collaborator-item .collaborator-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#community-collaboration .collaborator-item .collaborator-info {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+#community-collaboration .collaborator-item .collaborator-info strong {
+    display: block;
+    margin: 0;
+
+    color: var(--purple-dark);
+    font-size: 0.90rem;
+    font-weight: 700;
+}
+
+#community-collaboration .collaborator-item .collaborator-info span {
+    display: block;
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+#community-collaboration .collaborator-item .collaborator-info a {
+    display: inline-block;
+    margin-top: 2px;
+
+    color: var(--purple);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+#community-collaboration .collaborator-item .collaborator-info a:hover {
+    color: var(--gold);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #community-collaboration .collaborator-list li.collaborator-item {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    #community-collaboration .collaborator-item .collaborator-logo {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+/* =========================================
+   REGIONAL & PROJECT COLLABORATIONS
+   Logo on the RIGHT
+========================================= */
+
+.collaboration-content .collaborator-item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 0px;
+}
+
+.collaboration-content .collaborator-logo {
+    flex: 0 0 120px;
+    width: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.collaboration-content .collaborator-logo img {
+    display: block;
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.collaboration-content .collaborator-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .collaboration-content .collaborator-item {
+        gap: 16px;
+    }
+
+    .collaboration-content .collaborator-logo {
+        flex-basis: 80px;
+        width: 80px;
+    }
+
+    .collaboration-content .collaborator-logo img {
+        max-height: 90px;
+    }
 }
 
 
